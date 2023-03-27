@@ -340,7 +340,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -356,6 +358,21 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-simulators">Physics Simulators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design">Design</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-load-and-demand-models">Grid load and demand models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-models">Cost models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessors">Preprocessors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postprocessors">Postprocessors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wild-life-impact">Wild Life Impact</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -367,7 +384,153 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="software-listing">
 <h1>Software Listing<a class="headerlink" href="#software-listing" title="Permalink to this heading">#</a></h1>
-<p>This is the list of software projects and their URL’s.</p>
+<p>This is the list of software projects under the WETO umbrella along with their repository URL’s.</p>
+<section id="physics-simulators">
+<h2>Physics Simulators<a class="headerlink" href="#physics-simulators" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>FLORIS: <a class="github reference external" href="https://github.com/nrel/floris">nrel/floris</a></p></li>
+<li><p>FLASC: <a class="github reference external" href="https://github.com/nrel/flasc">nrel/flasc</a></p></li>
+<li><p>emu: <a class="github reference external" href="https://github.com/nrel/emu_python">nrel/emu_python</a></p></li>
+<li><p>moa: <a class="github reference external" href="https://github.com/nrel/moa_python">nrel/moa_python</a></p></li>
+<li><p>OpenFAST: <a class="github reference external" href="https://github.com/openfast/openfast">openfast/openfast</a></p></li>
+<li><p>python-toolbox: <a class="github reference external" href="https://github.com/openfast/python_toolbox">openfast/python_toolbox</a></p></li>
+<li><p>matlab-toolbox: <a class="github reference external" href="https://github.com/openfast/matlab_toolbox">openfast/matlab_toolbox</a></p></li>
+<li><p>weio: <a class="github reference external" href="https://github.com/ebranlard/weio">ebranlard/weio</a></p></li>
+<li><p>SOWFA: <a class="github reference external" href="https://github.com/nrel/sowfa">nrel/sowfa</a></p></li>
+<li><p>Nalu-Wind: <a class="github reference external" href="https://github.com/exawind/nalu-wind">exawind/nalu-wind</a></p></li>
+<li><p>AMR-Wind: <a class="github reference external" href="https://github.com/exawind/amr-wind">exawind/amr-wind</a></p></li>
+<li><p>WISDEM: <a class="github reference external" href="https://github.com/wisdem/wisdem">wisdem/wisdem</a></p></li>
+<li><p>WEIS: <a class="github reference external" href="https://github.com/wisdem/weis">wisdem/weis</a></p></li>
+<li><p>WindSE: <a class="github reference external" href="https://github.com/nrel/windse">nrel/windse</a></p></li>
+<li><p>CCBlade: <a class="github reference external" href="https://github.com/WISDEM/CCBlade">WISDEM/CCBlade</a></p></li>
+<li><p>ROSCO: <a class="github reference external" href="https://github.com/NREL/ROSCO">NREL/ROSCO</a></p></li>
+<li><p>ERF: <a class="github reference external" href="https://github.com/erf-model/ERF">erf-model/ERF</a></p></li>
+<li><p>DW TAP: <a class="github reference external" href="https://github.com/NREL/dw-tap-app">NREL/dw-tap-app</a></p></li>
+<li><p>KiteFAST: <a class="github reference external" href="https://github.com/openfast/kitefast">openfast/kitefast</a></p></li>
+<li><p>MAFRIT: <a class="github reference external" href="https://github.com/NREL/MAFRIT">NREL/MAFRIT</a></p></li>
+<li><p>pBEAM: <a class="github reference external" href="https://github.com/WISDEM/pBEAM">WISDEM/pBEAM</a></p></li>
+<li><p>PyFrame3DD: <a class="github reference external" href="https://github.com/WISDEM/pyFrame3DD">WISDEM/pyFrame3DD</a></p></li>
+<li><p>RAFT: <a class="github reference external" href="https://github.com/WISDEM/RAFT">WISDEM/RAFT</a></p></li>
+<li><p>WPGNN and PLayGen: <a class="github reference external" href="https://github.com/NREL/WPGNN">NREL/WPGNN</a></p></li>
+<li><p>wtDigiTwin: <a class="github reference external" href="https://github.com/ebranlard/wtDigiTwin">ebranlard/wtDigiTwin</a></p></li>
+</ul>
+<p><strong>Deprecated or no longer supported</strong></p>
+<ul class="simple">
+<li><p>ADAMS2AD: The MSC.ADAMS-to-AeroDyn (ADAMS2AD) interface is a software package for simulating the coupled dynamic response of horizontal-axis wind turbines.</p></li>
+<li><p>BladeFS: Blade Fatigue Static (BladeFS) is a MATLAB script that was developed to determine loads and deflections associated with fatigue and static structural testing of wind turbine blades using matrix based finite element analysis.</p></li>
+<li><p>HARP_Opt: Horizontal Axis Rotor Performance Optimization (HARP_Opt) utilizes a multiple-objective genetic algorithm and blade-element momentum theory flow model to design horizontal-axis wind and hydrokinetic turbine rotors.</p></li>
+<li><p>NAFNoise: NREL AirFoil Noise (NAFNoise) is a program that predicts the noise of any airfoil shape for five different types of noise sources.</p></li>
+<li><p>PROPID: PROP Inverse Design (PROPID) is aerodynamic design software developed by the University of Illinois at Urbana-Champaign. You can use it to design rotors.</p></li>
+<li><p>DrivePy: DrivePy is physics-based drivetrain model that sizes drivetrain components based on aerodynamic and operational loads for use in a systems engineering model. It also calculates costs based on empirical data collected by NREL’s National Wind Technology Center.</p></li>
+<li><p>JacketSE: This is a module for static hydrodynamic, aerodynamic, and structural design and analysis of wind turbine jacket and towers within the Systems Engineering toolbox.</p></li>
+<li><p>Nacelle Systems Engineering Model and Hub Systems Engineering Model: nacelleSE and hubSE are models that size wind turbine hub system and drivetrain components based on key turbine design parameters and load inputs from a rotor model.</p></li>
+<li><p>RotorSE: This is a module for static aerodynamic and structural analysis of wind turbine rotors.</p></li>
+<li><p>TowerSE: This is a module for static aerodynamic and structural analysis of wind turbine towers.</p></li>
+<li><p>Turbine_costSE: turb_costSE is a set of models that link wind turbine component masses (and a few other key variables) to component costs.</p></li>
+</ul>
+</section>
+<section id="design">
+<h2>Design<a class="headerlink" href="#design" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>G2Aero: <a class="github reference external" href="https://github.com/NREL/G2Aero">NREL/G2Aero</a></p></li>
+<li><p>Gear-SCouP: <a class="github reference external" href="https://github.com/NREL/GEAR-SCouP">NREL/GEAR-SCouP</a></p></li>
+<li><p>HOPP: <a class="github reference external" href="https://github.com/NREL/HOPP">NREL/HOPP</a></p></li>
+<li><p>WISDEM/dakota_driver: <a class="github reference external" href="https://github.com/WISDEM/dakota_driver">WISDEM/dakota_driver</a></p></li>
+</ul>
+<p><strong>Repository not found</strong></p>
+<ul class="simple">
+<li><p>INN Airfoil Tools: This software package contains code to perform airfoil inverse shape design using a sparsified invertible neural network model. This is a specialized deep learning architecture that enables both network weights to be shared to evaluate forward or inverse passes through the network. As a design tool, this network allows practitioners to specify aerodynamic and structural properties and generate shapes that satisfy those properties.</p></li>
+</ul>
+</section>
+<section id="grid-load-and-demand-models">
+<h2>Grid load and demand models<a class="headerlink" href="#grid-load-and-demand-models" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>dGen: <a class="github reference external" href="https://github.com/NREL/dgen">NREL/dgen</a></p></li>
+<li><p>dsgrid: <a class="github reference external" href="https://github.com/dsgrid/dsgrid">dsgrid/dsgrid</a></p></li>
+<li><p>REopt: <a class="github reference external" href="https://github.com/NREL/REopt.jl">NREL/REopt.jl</a></p></li>
+<li><p>reV: <a class="github reference external" href="https://github.com/NREL/rev">NREL/rev</a></p></li>
+<li><p>reVX: <a class="github reference external" href="https://github.com/NREL/reVX">NREL/reVX</a></p></li>
+<li><p>rex: <a class="github reference external" href="https://github.com/NREL/rex">NREL/rex</a></p></li>
+<li><p>MAGMA: <a class="github reference external" href="https://github.com/NREL/MAGMA">NREL/MAGMA</a></p></li>
+</ul>
+</section>
+<section id="cost-models">
+<h2>Cost models<a class="headerlink" href="#cost-models" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>LandBOSSE: <a class="github reference external" href="https://github.com/WISDEM/LandBOSSE">WISDEM/LandBOSSE</a></p></li>
+<li><p>HybridBOSSE: <a class="github reference external" href="https://github.com/NREL/HybridBOSSE">NREL/HybridBOSSE</a></p></li>
+<li><p>ORBIT: <a class="github reference external" href="https://github.com/WISDEM/ORBIT">WISDEM/ORBIT</a></p></li>
+<li><p>CORAL: <a class="github reference external" href="https://github.com/NREL/CORAL">NREL/CORAL</a></p></li>
+<li><p>NRWAL: <a class="github reference external" href="https://github.com/NREL/NRWAL">NREL/NRWAL</a></p></li>
+<li><p>WOMBAT: <a class="github reference external" href="https://github.com/WISDEM/WOMBAT">WISDEM/WOMBAT</a></p></li>
+<li><p>OpenOA: <a class="github reference external" href="https://github.com/nrel/openoa">nrel/openoa</a></p></li>
+<li><p>FUSED-Wind: <a class="github reference external" href="https://github.com/FUSED-Wind/fusedwind">FUSED-Wind/fusedwind</a></p></li>
+<li><p>Marmot: <a class="github reference external" href="https://github.com/NREL/Marmot">NREL/Marmot</a></p></li>
+</ul>
+<p><strong>Repository not found</strong></p>
+<ul class="simple">
+<li><p>JEDI (more macro than software)</p></li>
+<li><p>ORCA</p></li>
+<li><p>CREST: Cost of Renewable Energy Spreadsheet Tool</p></li>
+</ul>
+<p><strong>Deprecated or no longer supported</strong></p>
+<ul class="simple">
+<li><p>LandOpExSE: This is a cost model for operational expenditures for land-based wind plants.</p></li>
+<li><p>NREL_CSM: NREL Wind Energy Cost and Scaling Model</p></li>
+</ul>
+</section>
+<section id="preprocessors">
+<h2>Preprocessors<a class="headerlink" href="#preprocessors" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>AirfoilPrep: <a class="github reference external" href="https://github.com/WISDEM/AirfoilPreppy">WISDEM/AirfoilPreppy</a></p></li>
+<li><p>NuMAD: <a class="github reference external" href="https://github.com/sandialabs/NuMAD">sandialabs/NuMAD</a></p></li>
+</ul>
+<p><strong>Deprecated or no longer supported</strong></p>
+<ul class="simple">
+<li><p>AirfoilPrep: AirfoilPrep is a preprocessor for generating airfoil tables for AeroDyn.</p></li>
+<li><p>BModes: BModes is a finite-element code that provides dynamically coupled modes for a beam.</p></li>
+<li><p>IECWind: IECWind is a utility program used to create wind files for InflowWind-based programs.</p></li>
+<li><p>Modes: Modes generates mode shapes for wind turbine towers and blades.</p></li>
+<li><p>PreComp: PreComp is a code that provides span-variant structural properties for composite blades.</p></li>
+<li><p>SS_Fitting: SS_Fitting is a MATLAB toolbox designed to provide a state-space model based on the WAMIT output files.</p></li>
+</ul>
+<p><strong>Included in OpenFAST</strong></p>
+<ul class="simple">
+<li><p>TurbSim: TurbSim is a stochastic, full-field, turbulence simulator primarily for use with InflowWind-based simulation tools.</p></li>
+</ul>
+</section>
+<section id="postprocessors">
+<h2>Postprocessors<a class="headerlink" href="#postprocessors" title="Permalink to this heading">#</a></h2>
+<p>All software listed here are no longer supported and are not hosted on GitHub.</p>
+<ul class="simple">
+<li><p>Crunch: Crunch is a software utility that performs several types of post-processing analyses for one or more files.</p></li>
+<li><p>GenStats: GenStats is a fairly simple utility that generates statistics for one or more files.</p></li>
+<li><p>GPP: GPP (pronounced “jeep”) is a general-purpose postprocessor for wind turbine data analysis.</p></li>
+<li><p>MBC: MBC is a set of MATLAB scripts that performs multi-blade coordinate (MBC) transformation on wind turbine system models.</p></li>
+<li><p>MCrunch: MCrunch is a MATLAB-based postprocessor for wind turbine data analysis.</p></li>
+<li><p>MExtremes: MExtremes (pronounced em-extremes) is a set of MATLABscripts that generate extreme-event tables for one or more time series.</p></li>
+<li><p>MLife: MLife (pronounced em-life) is a set of MATLAB scripts that calculate fatigue life and statistics for one or more time series.</p></li>
+</ul>
+</section>
+<section id="wild-life-impact">
+<h2>Wild Life Impact<a class="headerlink" href="#wild-life-impact" title="Permalink to this heading">#</a></h2>
+<p>SSRS: <a class="github reference external" href="https://github.com/NREL/SSRS">NREL/SSRS</a></p>
+</section>
+<section id="other">
+<h2>Other<a class="headerlink" href="#other" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>CELAVI: <a class="github reference external" href="https://github.com/NREL/celavi">NREL/celavi</a></p></li>
+<li><p>CEWAM: <a class="github reference external" href="https://github.com/NREL/CEWAM">NREL/CEWAM</a></p></li>
+<li><p>GDX-pandas: <a class="github reference external" href="https://github.com/NREL/gdx-pandas">NREL/gdx-pandas</a></p></li>
+<li><p>L-TERRA: <a class="github reference external" href="https://github.com/NREL/L-TERRA">NREL/L-TERRA</a></p></li>
+<li><p>NaTGenPD: <a class="github reference external" href="https://github.com/NREL/NaTGenPD">NREL/NaTGenPD</a></p></li>
+<li><p>OSOS: <a class="github reference external" href="https://github.com/NREL/osos">NREL/osos</a></p></li>
+<li><p>R2PD: <a class="github reference external" href="https://github.com/Smart-DS/R2PD">Smart-DS/R2PD</a></p></li>
+<li><p>Reegle Tagging API (CKAN Extension): <a class="github reference external" href="https://github.com/REEEP/ckanext-climate-tagger">REEEP/ckanext-climate-tagger</a></p></li>
+<li><p>sup3r: <a class="github reference external" href="https://github.com/NREL/sup3r">NREL/sup3r</a></p></li>
+<li><p>WindView: <a class="github reference external" href="https://github.com/windview/client">windview/client</a></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -422,6 +585,27 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-simulators">Physics Simulators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design">Design</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-load-and-demand-models">Grid load and demand models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-models">Cost models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessors">Preprocessors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postprocessors">Postprocessors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wild-life-impact">Wild Life Impact</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
