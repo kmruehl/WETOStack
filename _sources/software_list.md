@@ -1,9 +1,7 @@
 
 # Software Listing
 
-This list contains software projects related to wind energy in some way.
-The funding agencies and responsible labs vary.
-A list of software that is specifically supported by WETO is at {ref}`weto-list`.
+This is the list of software projects under the WETO umbrella along with their repository URL's.
 
 
 ## Physics Simulators
@@ -143,37 +141,3 @@ SSRS: https://github.com/NREL/SSRS
 - Reegle Tagging API (CKAN Extension): https://github.com/REEEP/ckanext-climate-tagger
 - sup3r: https://github.com/NREL/sup3r
 - WindView: https://github.com/windview/client
-
-
-(weto-list)=
-## WETO Software
-
-- FLORIS: https://github.com/nrel/floris
-- FLASC: https://github.com/nrel/flasc
-- emu: https://github.com/nrel/emu_python
-- moa: https://github.com/nrel/moa_python
-- OpenFAST: https://github.com/openfast/openfast
-- python-toolbox: https://github.com/openfast/python_toolbox
-- matlab-toolbox: https://github.com/openfast/matlab_toolbox
-- SOWFA: https://github.com/nrel/sowfa
-- Nalu-Wind: https://github.com/exawind/nalu-wind
-- AMR-Wind: https://github.com/exawind/amr-wind
-- WISDEM: https://github.com/wisdem/wisdem
-- WEIS: https://github.com/wisdem/weis
-- WindSE: https://github.com/nrel/windse
-- ROSCO: https://github.com/NREL/ROSCO
-- ERF: https://github.com/erf-model/ERF
-- DW TAP: https://github.com/NREL/dw-tap-app
-- RAFT: https://github.com/WISDEM/RAFT
-- WPGNN and PLayGen: https://github.com/NREL/WPGNN
-- wtDigiTwin: https://github.com/ebranlard/wtDigiTwin
-- HOPP: https://github.com/NREL/HOPP
-- LandBOSSE: https://github.com/WISDEM/LandBOSSE
-- HybridBOSSE: https://github.com/NREL/HybridBOSSE
-- ORBIT: https://github.com/WISDEM/ORBIT
-- NRWAL: https://github.com/NREL/NRWAL
-- WOMBAT: https://github.com/WISDEM/WOMBAT
-- OpenOA: https://github.com/nrel/openoa
-- AirfoilPrep: https://github.com/WISDEM/AirfoilPreppy
-- NuMAD: https://github.com/sandialabs/NuMAD
-- SSRS: https://github.com/NREL/SSRS
