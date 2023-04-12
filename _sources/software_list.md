@@ -153,8 +153,6 @@ SSRS: https://github.com/NREL/SSRS
 - emu: https://github.com/nrel/emu_python
 - moa: https://github.com/nrel/moa_python
 - OpenFAST: https://github.com/openfast/openfast
-- python-toolbox: https://github.com/openfast/python_toolbox
-- matlab-toolbox: https://github.com/openfast/matlab_toolbox
 - SOWFA: https://github.com/nrel/sowfa
 - Nalu-Wind: https://github.com/exawind/nalu-wind
 - AMR-Wind: https://github.com/exawind/amr-wind
@@ -174,6 +172,7 @@ SSRS: https://github.com/NREL/SSRS
 - NRWAL: https://github.com/NREL/NRWAL
 - WOMBAT: https://github.com/WISDEM/WOMBAT
 - OpenOA: https://github.com/nrel/openoa
-- AirfoilPrep: https://github.com/WISDEM/AirfoilPreppy
 - NuMAD: https://github.com/sandialabs/NuMAD
 - SSRS: https://github.com/NREL/SSRS
+- CORAL: https://github.com/NREL/CORAL
+- MoorPy: https://github.com/nrel/moorpy
