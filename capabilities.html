@@ -7,8 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; WETO Stack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Capabilities &#8212; WETO Stack</title>
   
   
   
@@ -62,9 +63,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
-    <link rel="index" title="Index" href="#" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'capabilities';</script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Software Quality" href="software_quality.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -149,10 +151,10 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="software_list.html">Software Listing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="software_quality.html">Software Quality</a></li>
-<li class="toctree-l1"><a class="reference internal" href="capabilities.html">Capabilities</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Capabilities</a></li>
 </ul>
 
     </div>
@@ -224,7 +226,24 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/rafmudaf/wetostack/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/rafmudaf/wetostack/edit/main/docs/capabilities.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/rafmudaf/wetostack/issues/new?title=Issue%20on%20page%20%2Fcapabilities.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -236,6 +255,54 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/capabilities.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -275,7 +342,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -286,11 +355,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>Capabilities</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-design">System design</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-turbine-and-wind-farm-aerodynamics">Wind turbine and wind farm aerodynamics</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -300,13 +378,74 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
+  <section class="tex2jax_ignore mathjax_ignore" id="capabilities">
+<h1>Capabilities<a class="headerlink" href="#capabilities" title="Permalink to this heading">#</a></h1>
+<p>This dashboard outlines typical workflows and capabilities involved
+in wind energy system design and analysis using the WETO Software Suite.</p>
+<section id="system-design">
+<h2>System design<a class="headerlink" href="#system-design" title="Permalink to this heading">#</a></h2>
+<p>System design involves the high-level preliminary design of the power
+generation systems and their connection to the grid. Additionally, cost
+models are incorporated here to identify an initial estimate of the cost
+of energy.</p>
+<div class="mermaid">
+            mindmap
+    root((System))
+        Blade, tower, turbine components
+            Turbine controls
+            Farm layout
+                Farm controls
+        Balance of station
+        Cost
+        </div></section>
+<section id="wind-turbine-and-wind-farm-aerodynamics">
+<h2>Wind turbine and wind farm aerodynamics<a class="headerlink" href="#wind-turbine-and-wind-farm-aerodynamics" title="Permalink to this heading">#</a></h2>
+<p>The detailed design of wind turbine components and wind farms is detailed
+here. This process typically involves modeling system components at varying
+levels of fidelity while moving through the design space.</p>
+<div class="mermaid">
+            flowchart TD
+    A[&quot;`**ExaWind**
+    RANS/LES hybrid, time accurate, blade resolved`&quot;]
 
-<h1 id="index">Index</h1>
+    B[&quot;`**AMRWind**
+    LES, time accurate, actuator line`&quot;]
 
-<div class="genindex-jumpbox">
- 
-</div>
+    C[&quot;`**WindSE**
+    RANS, time accurate, actuator disk`&quot;]
 
+    D[&quot;`**OpenFAST/FAST.Farm**
+    Engineering models, time accurate, BEM, beam models`&quot;]
+
+    E[&quot;`**FLORIS**
+    Analytical, steady state`&quot;]
+
+    A --- B
+    B --- C
+    C --- D
+    D --- E
+        </div></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -316,12 +455,36 @@ document.write(`
                 <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="software_quality.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Software Quality</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-design">System design</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-turbine-and-wind-farm-aerodynamics">Wind turbine and wind farm aerodynamics</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
