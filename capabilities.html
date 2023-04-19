@@ -66,7 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'capabilities';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Software Quality" href="software_quality.html" />
+    <link rel="next" title="Software Quality" href="software_quality.html" />
+    <link rel="prev" title="Software Listing" href="software_list.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="software_list.html">Software Listing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="software_quality.html">Software Quality</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Capabilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_quality.html">Software Quality</a></li>
 </ul>
 
     </div>
@@ -365,6 +366,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wireframe-prototype">Wireframe prototype</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-design">System design</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-turbine-and-wind-farm-aerodynamics">Wind turbine and wind farm aerodynamics</a></li>
 </ul>
@@ -380,8 +382,17 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="capabilities">
 <h1>Capabilities<a class="headerlink" href="#capabilities" title="Permalink to this heading">#</a></h1>
-<p>This dashboard outlines typical workflows and capabilities involved
+<p>This dashboard will outline typical workflows and capabilities involved
 in wind energy system design and analysis using the WETO Software Suite.</p>
+<section id="wireframe-prototype">
+<h2>Wireframe prototype<a class="headerlink" href="#wireframe-prototype" title="Permalink to this heading">#</a></h2>
+<p>The capabilities dashboard will contain a list of high level capabilities made up of components
+of the WETO software stack. It will describe each capability as they relate to the software
+used to complete it. This should not be a tutorial on doing each of these things, but it should
+give an idea of the tools that are required to do it. It will give an intuition on which
+models are related, interconnected, and perform certain tasks.</p>
+<img alt="capabilities" class="align-center" src="_images/capabilities_listing_design.png" />
+</section>
 <section id="system-design">
 <h2>System design<a class="headerlink" href="#system-design" title="Permalink to this heading">#</a></h2>
 <p>System design involves the high-level preliminary design of the power
@@ -456,13 +467,22 @@ levels of fidelity while moving through the design space.</p>
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="software_quality.html"
+       href="software_list.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Software Listing</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="software_quality.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Software Quality</p>
       </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -479,6 +499,7 @@ levels of fidelity while moving through the design space.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wireframe-prototype">Wireframe prototype</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-design">System design</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-turbine-and-wind-farm-aerodynamics">Wind turbine and wind farm aerodynamics</a></li>
 </ul>

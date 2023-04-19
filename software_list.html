@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'software_list';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Software Quality" href="software_quality.html" />
+    <link rel="next" title="Capabilities" href="capabilities.html" />
     <link rel="prev" title="WETO Software Stack" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -154,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Software Listing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="software_quality.html">Software Quality</a></li>
 <li class="toctree-l1"><a class="reference internal" href="capabilities.html">Capabilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_quality.html">Software Quality</a></li>
 </ul>
 
     </div>
@@ -366,15 +366,22 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-simulators">Physics Simulators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design">Design</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-load-and-demand-models">Grid load and demand models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-models">Cost models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessors">Preprocessors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postprocessors">Postprocessors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wild-life-impact">Wild Life Impact</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weto-software">WETO Software</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weto-software">WETO Software</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-simulators">Physics Simulators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-models">Cost models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wild-life-impact">Wild Life Impact</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-funding-status">Other Funding Status</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Physics Simulators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#design">Design</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-load-and-demand-models">Grid load and demand models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Cost models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessors">Preprocessors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#postprocessors">Postprocessors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -388,37 +395,73 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="software-listing">
 <h1>Software Listing<a class="headerlink" href="#software-listing" title="Permalink to this heading">#</a></h1>
-<p>This list contains software projects related to wind energy in some way.
-The funding agencies and responsible labs vary.
-A list of software that is specifically supported by WETO is at <a class="reference internal" href="#weto-list"><span class="std std-ref">WETO Software</span></a>.</p>
+<p>This listing contains two groups of software projects:</p>
+<ol class="arabic simple">
+<li><p>WETO-funded software</p></li>
+<li><p>Other projects funded by various agencies and mechanisms</p></li>
+</ol>
+<p>All of these tools relate to some asept of wind energy development from component design
+and analysis to cost modeling and supply chain analysis.</p>
+<section id="weto-software">
+<h2>WETO Software<a class="headerlink" href="#weto-software" title="Permalink to this heading">#</a></h2>
+<p>These projects are actively funded by WETO as of FY23.</p>
 <section id="physics-simulators">
-<h2>Physics Simulators<a class="headerlink" href="#physics-simulators" title="Permalink to this heading">#</a></h2>
+<h3>Physics Simulators<a class="headerlink" href="#physics-simulators" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>FLORIS: <a class="github reference external" href="https://github.com/nrel/floris">nrel/floris</a></p></li>
 <li><p>FLASC: <a class="github reference external" href="https://github.com/nrel/flasc">nrel/flasc</a></p></li>
 <li><p>emu: <a class="github reference external" href="https://github.com/nrel/emu_python">nrel/emu_python</a></p></li>
 <li><p>moa: <a class="github reference external" href="https://github.com/nrel/moa_python">nrel/moa_python</a></p></li>
 <li><p>OpenFAST: <a class="github reference external" href="https://github.com/openfast/openfast">openfast/openfast</a></p></li>
-<li><p>python-toolbox: <a class="github reference external" href="https://github.com/openfast/python_toolbox">openfast/python_toolbox</a></p></li>
-<li><p>matlab-toolbox: <a class="github reference external" href="https://github.com/openfast/matlab_toolbox">openfast/matlab_toolbox</a></p></li>
-<li><p>weio: <a class="github reference external" href="https://github.com/ebranlard/weio">ebranlard/weio</a></p></li>
 <li><p>SOWFA: <a class="github reference external" href="https://github.com/nrel/sowfa">nrel/sowfa</a></p></li>
 <li><p>Nalu-Wind: <a class="github reference external" href="https://github.com/exawind/nalu-wind">exawind/nalu-wind</a></p></li>
 <li><p>AMR-Wind: <a class="github reference external" href="https://github.com/exawind/amr-wind">exawind/amr-wind</a></p></li>
 <li><p>WISDEM: <a class="github reference external" href="https://github.com/wisdem/wisdem">wisdem/wisdem</a></p></li>
 <li><p>WEIS: <a class="github reference external" href="https://github.com/wisdem/weis">wisdem/weis</a></p></li>
 <li><p>WindSE: <a class="github reference external" href="https://github.com/nrel/windse">nrel/windse</a></p></li>
-<li><p>CCBlade: <a class="github reference external" href="https://github.com/WISDEM/CCBlade">WISDEM/CCBlade</a></p></li>
 <li><p>ROSCO: <a class="github reference external" href="https://github.com/NREL/ROSCO">NREL/ROSCO</a></p></li>
 <li><p>ERF: <a class="github reference external" href="https://github.com/erf-model/ERF">erf-model/ERF</a></p></li>
 <li><p>DW TAP: <a class="github reference external" href="https://github.com/NREL/dw-tap-app">NREL/dw-tap-app</a></p></li>
+<li><p>RAFT: <a class="github reference external" href="https://github.com/WISDEM/RAFT">WISDEM/RAFT</a></p></li>
+<li><p>NuMAD: <a class="github reference external" href="https://github.com/sandialabs/NuMAD">sandialabs/NuMAD</a></p></li>
+<li><p>MoorPy: <a class="github reference external" href="https://github.com/nrel/moorpy">nrel/moorpy</a></p></li>
+<li><p>wtDigiTwin: <a class="github reference external" href="https://github.com/ebranlard/wtDigiTwin">ebranlard/wtDigiTwin</a></p></li>
+<li><p>HOPP: <a class="github reference external" href="https://github.com/NREL/HOPP">NREL/HOPP</a></p></li>
+<li><p>WPGNN and PLayGen: <a class="github reference external" href="https://github.com/NREL/WPGNN">NREL/WPGNN</a></p></li>
+</ul>
+</section>
+<section id="cost-models">
+<h3>Cost models<a class="headerlink" href="#cost-models" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>LandBOSSE: <a class="github reference external" href="https://github.com/WISDEM/LandBOSSE">WISDEM/LandBOSSE</a></p></li>
+<li><p>HybridBOSSE: <a class="github reference external" href="https://github.com/NREL/HybridBOSSE">NREL/HybridBOSSE</a></p></li>
+<li><p>ORBIT: <a class="github reference external" href="https://github.com/WISDEM/ORBIT">WISDEM/ORBIT</a></p></li>
+<li><p>CORAL: <a class="github reference external" href="https://github.com/NREL/CORAL">NREL/CORAL</a></p></li>
+<li><p>NRWAL: <a class="github reference external" href="https://github.com/NREL/NRWAL">NREL/NRWAL</a></p></li>
+<li><p>WOMBAT: <a class="github reference external" href="https://github.com/WISDEM/WOMBAT">WISDEM/WOMBAT</a></p></li>
+<li><p>OpenOA: <a class="github reference external" href="https://github.com/nrel/openoa">nrel/openoa</a></p></li>
+</ul>
+</section>
+<section id="wild-life-impact">
+<h3>Wild Life Impact<a class="headerlink" href="#wild-life-impact" title="Permalink to this heading">#</a></h3>
+<p>SSRS: <a class="github reference external" href="https://github.com/NREL/SSRS">NREL/SSRS</a></p>
+</section>
+</section>
+<section id="other-funding-status">
+<h2>Other Funding Status<a class="headerlink" href="#other-funding-status" title="Permalink to this heading">#</a></h2>
+<p>These groups of projects are either funded by mechanisms outside of WETO or are
+not actively funded.</p>
+<section id="id1">
+<h3>Physics Simulators<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>python-toolbox: <a class="github reference external" href="https://github.com/openfast/python_toolbox">openfast/python_toolbox</a></p></li>
+<li><p>matlab-toolbox: <a class="github reference external" href="https://github.com/openfast/matlab_toolbox">openfast/matlab_toolbox</a></p></li>
+<li><p>weio: <a class="github reference external" href="https://github.com/ebranlard/weio">ebranlard/weio</a></p></li>
+<li><p>CCBlade: <a class="github reference external" href="https://github.com/WISDEM/CCBlade">WISDEM/CCBlade</a></p></li>
 <li><p>KiteFAST: <a class="github reference external" href="https://github.com/openfast/kitefast">openfast/kitefast</a></p></li>
 <li><p>MAFRIT: <a class="github reference external" href="https://github.com/NREL/MAFRIT">NREL/MAFRIT</a></p></li>
 <li><p>pBEAM: <a class="github reference external" href="https://github.com/WISDEM/pBEAM">WISDEM/pBEAM</a></p></li>
 <li><p>PyFrame3DD: <a class="github reference external" href="https://github.com/WISDEM/pyFrame3DD">WISDEM/pyFrame3DD</a></p></li>
-<li><p>RAFT: <a class="github reference external" href="https://github.com/WISDEM/RAFT">WISDEM/RAFT</a></p></li>
-<li><p>WPGNN and PLayGen: <a class="github reference external" href="https://github.com/NREL/WPGNN">NREL/WPGNN</a></p></li>
-<li><p>wtDigiTwin: <a class="github reference external" href="https://github.com/ebranlard/wtDigiTwin">ebranlard/wtDigiTwin</a></p></li>
 </ul>
 <p><strong>Deprecated or no longer supported</strong></p>
 <ul class="simple">
@@ -436,7 +479,7 @@ A list of software that is specifically supported by WETO is at <a class="refere
 </ul>
 </section>
 <section id="design">
-<h2>Design<a class="headerlink" href="#design" title="Permalink to this heading">#</a></h2>
+<h3>Design<a class="headerlink" href="#design" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>G2Aero: <a class="github reference external" href="https://github.com/NREL/G2Aero">NREL/G2Aero</a></p></li>
 <li><p>Gear-SCouP: <a class="github reference external" href="https://github.com/NREL/GEAR-SCouP">NREL/GEAR-SCouP</a></p></li>
@@ -449,7 +492,7 @@ A list of software that is specifically supported by WETO is at <a class="refere
 </ul>
 </section>
 <section id="grid-load-and-demand-models">
-<h2>Grid load and demand models<a class="headerlink" href="#grid-load-and-demand-models" title="Permalink to this heading">#</a></h2>
+<h3>Grid load and demand models<a class="headerlink" href="#grid-load-and-demand-models" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>dGen: <a class="github reference external" href="https://github.com/NREL/dgen">NREL/dgen</a></p></li>
 <li><p>dsgrid: <a class="github reference external" href="https://github.com/dsgrid/dsgrid">dsgrid/dsgrid</a></p></li>
@@ -460,16 +503,9 @@ A list of software that is specifically supported by WETO is at <a class="refere
 <li><p>MAGMA: <a class="github reference external" href="https://github.com/NREL/MAGMA">NREL/MAGMA</a></p></li>
 </ul>
 </section>
-<section id="cost-models">
-<h2>Cost models<a class="headerlink" href="#cost-models" title="Permalink to this heading">#</a></h2>
+<section id="id2">
+<h3>Cost models<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>LandBOSSE: <a class="github reference external" href="https://github.com/WISDEM/LandBOSSE">WISDEM/LandBOSSE</a></p></li>
-<li><p>HybridBOSSE: <a class="github reference external" href="https://github.com/NREL/HybridBOSSE">NREL/HybridBOSSE</a></p></li>
-<li><p>ORBIT: <a class="github reference external" href="https://github.com/WISDEM/ORBIT">WISDEM/ORBIT</a></p></li>
-<li><p>CORAL: <a class="github reference external" href="https://github.com/NREL/CORAL">NREL/CORAL</a></p></li>
-<li><p>NRWAL: <a class="github reference external" href="https://github.com/NREL/NRWAL">NREL/NRWAL</a></p></li>
-<li><p>WOMBAT: <a class="github reference external" href="https://github.com/WISDEM/WOMBAT">WISDEM/WOMBAT</a></p></li>
-<li><p>OpenOA: <a class="github reference external" href="https://github.com/nrel/openoa">nrel/openoa</a></p></li>
 <li><p>FUSED-Wind: <a class="github reference external" href="https://github.com/FUSED-Wind/fusedwind">FUSED-Wind/fusedwind</a></p></li>
 <li><p>Marmot: <a class="github reference external" href="https://github.com/NREL/Marmot">NREL/Marmot</a></p></li>
 </ul>
@@ -486,10 +522,9 @@ A list of software that is specifically supported by WETO is at <a class="refere
 </ul>
 </section>
 <section id="preprocessors">
-<h2>Preprocessors<a class="headerlink" href="#preprocessors" title="Permalink to this heading">#</a></h2>
+<h3>Preprocessors<a class="headerlink" href="#preprocessors" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>AirfoilPrep: <a class="github reference external" href="https://github.com/WISDEM/AirfoilPreppy">WISDEM/AirfoilPreppy</a></p></li>
-<li><p>NuMAD: <a class="github reference external" href="https://github.com/sandialabs/NuMAD">sandialabs/NuMAD</a></p></li>
 </ul>
 <p><strong>Deprecated or no longer supported</strong></p>
 <ul class="simple">
@@ -506,7 +541,7 @@ A list of software that is specifically supported by WETO is at <a class="refere
 </ul>
 </section>
 <section id="postprocessors">
-<h2>Postprocessors<a class="headerlink" href="#postprocessors" title="Permalink to this heading">#</a></h2>
+<h3>Postprocessors<a class="headerlink" href="#postprocessors" title="Permalink to this heading">#</a></h3>
 <p>All software listed here are no longer supported and are not hosted on GitHub.</p>
 <ul class="simple">
 <li><p>Crunch: Crunch is a software utility that performs several types of post-processing analyses for one or more files.</p></li>
@@ -518,12 +553,8 @@ A list of software that is specifically supported by WETO is at <a class="refere
 <li><p>MLife: MLife (pronounced em-life) is a set of MATLAB scripts that calculate fatigue life and statistics for one or more time series.</p></li>
 </ul>
 </section>
-<section id="wild-life-impact">
-<h2>Wild Life Impact<a class="headerlink" href="#wild-life-impact" title="Permalink to this heading">#</a></h2>
-<p>SSRS: <a class="github reference external" href="https://github.com/NREL/SSRS">NREL/SSRS</a></p>
-</section>
 <section id="other">
-<h2>Other<a class="headerlink" href="#other" title="Permalink to this heading">#</a></h2>
+<h3>Other<a class="headerlink" href="#other" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>CELAVI: <a class="github reference external" href="https://github.com/NREL/celavi">NREL/celavi</a></p></li>
 <li><p>CEWAM: <a class="github reference external" href="https://github.com/NREL/CEWAM">NREL/CEWAM</a></p></li>
@@ -537,38 +568,6 @@ A list of software that is specifically supported by WETO is at <a class="refere
 <li><p>WindView: <a class="github reference external" href="https://github.com/windview/client">windview/client</a></p></li>
 </ul>
 </section>
-<section id="weto-software">
-<span id="weto-list"></span><h2>WETO Software<a class="headerlink" href="#weto-software" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>FLORIS: <a class="github reference external" href="https://github.com/nrel/floris">nrel/floris</a></p></li>
-<li><p>FLASC: <a class="github reference external" href="https://github.com/nrel/flasc">nrel/flasc</a></p></li>
-<li><p>emu: <a class="github reference external" href="https://github.com/nrel/emu_python">nrel/emu_python</a></p></li>
-<li><p>moa: <a class="github reference external" href="https://github.com/nrel/moa_python">nrel/moa_python</a></p></li>
-<li><p>OpenFAST: <a class="github reference external" href="https://github.com/openfast/openfast">openfast/openfast</a></p></li>
-<li><p>SOWFA: <a class="github reference external" href="https://github.com/nrel/sowfa">nrel/sowfa</a></p></li>
-<li><p>Nalu-Wind: <a class="github reference external" href="https://github.com/exawind/nalu-wind">exawind/nalu-wind</a></p></li>
-<li><p>AMR-Wind: <a class="github reference external" href="https://github.com/exawind/amr-wind">exawind/amr-wind</a></p></li>
-<li><p>WISDEM: <a class="github reference external" href="https://github.com/wisdem/wisdem">wisdem/wisdem</a></p></li>
-<li><p>WEIS: <a class="github reference external" href="https://github.com/wisdem/weis">wisdem/weis</a></p></li>
-<li><p>WindSE: <a class="github reference external" href="https://github.com/nrel/windse">nrel/windse</a></p></li>
-<li><p>ROSCO: <a class="github reference external" href="https://github.com/NREL/ROSCO">NREL/ROSCO</a></p></li>
-<li><p>ERF: <a class="github reference external" href="https://github.com/erf-model/ERF">erf-model/ERF</a></p></li>
-<li><p>DW TAP: <a class="github reference external" href="https://github.com/NREL/dw-tap-app">NREL/dw-tap-app</a></p></li>
-<li><p>RAFT: <a class="github reference external" href="https://github.com/WISDEM/RAFT">WISDEM/RAFT</a></p></li>
-<li><p>WPGNN and PLayGen: <a class="github reference external" href="https://github.com/NREL/WPGNN">NREL/WPGNN</a></p></li>
-<li><p>wtDigiTwin: <a class="github reference external" href="https://github.com/ebranlard/wtDigiTwin">ebranlard/wtDigiTwin</a></p></li>
-<li><p>HOPP: <a class="github reference external" href="https://github.com/NREL/HOPP">NREL/HOPP</a></p></li>
-<li><p>LandBOSSE: <a class="github reference external" href="https://github.com/WISDEM/LandBOSSE">WISDEM/LandBOSSE</a></p></li>
-<li><p>HybridBOSSE: <a class="github reference external" href="https://github.com/NREL/HybridBOSSE">NREL/HybridBOSSE</a></p></li>
-<li><p>ORBIT: <a class="github reference external" href="https://github.com/WISDEM/ORBIT">WISDEM/ORBIT</a></p></li>
-<li><p>NRWAL: <a class="github reference external" href="https://github.com/NREL/NRWAL">NREL/NRWAL</a></p></li>
-<li><p>WOMBAT: <a class="github reference external" href="https://github.com/WISDEM/WOMBAT">WISDEM/WOMBAT</a></p></li>
-<li><p>OpenOA: <a class="github reference external" href="https://github.com/nrel/openoa">nrel/openoa</a></p></li>
-<li><p>NuMAD: <a class="github reference external" href="https://github.com/sandialabs/NuMAD">sandialabs/NuMAD</a></p></li>
-<li><p>SSRS: <a class="github reference external" href="https://github.com/NREL/SSRS">NREL/SSRS</a></p></li>
-<li><p>CORAL: <a class="github reference external" href="https://github.com/NREL/CORAL">NREL/CORAL</a></p></li>
-<li><p>MoorPy: <a class="github reference external" href="https://github.com/nrel/moorpy">nrel/moorpy</a></p></li>
-</ul>
 </section>
 </section>
 
@@ -610,11 +609,11 @@ A list of software that is specifically supported by WETO is at <a class="refere
       </div>
     </a>
     <a class="right-next"
-       href="software_quality.html"
+       href="capabilities.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Software Quality</p>
+        <p class="prev-next-title">Capabilities</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -633,15 +632,22 @@ A list of software that is specifically supported by WETO is at <a class="refere
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-simulators">Physics Simulators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design">Design</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-load-and-demand-models">Grid load and demand models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-models">Cost models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessors">Preprocessors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postprocessors">Postprocessors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wild-life-impact">Wild Life Impact</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weto-software">WETO Software</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weto-software">WETO Software</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-simulators">Physics Simulators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-models">Cost models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wild-life-impact">Wild Life Impact</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-funding-status">Other Funding Status</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Physics Simulators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#design">Design</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-load-and-demand-models">Grid load and demand models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Cost models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessors">Preprocessors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#postprocessors">Postprocessors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
