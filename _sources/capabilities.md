@@ -44,20 +44,20 @@ levels of fidelity while moving through the design space.
 
 ```{mermaid}
 flowchart TD
-    A["`**ExaWind**
-    RANS/LES hybrid, time accurate, blade resolved`"]
+    A["ExaWind
+    RANS/LES hybrid, time accurate, blade resolved"]
 
-    B["`**AMRWind**
-    LES, time accurate, actuator line`"]
+    B["AMR-Wind
+    LES, time accurate, actuator line"]
 
-    C["`**WindSE**
-    RANS, time accurate, actuator disk`"]
+    C["WindSE
+    RANS, time accurate, actuator disk"]
 
-    D["`**OpenFAST/FAST.Farm**
-    Engineering models, time accurate, BEM, beam models`"]
+    D["OpenFAST/FAST.Farm
+    Engineering models, time accurate, BEM, beam models"]
 
-    E["`**FLORIS**
-    Analytical, steady state`"]
+    E["FLORIS
+    Analytical, steady state"]
 
     A --- B
     B --- C
