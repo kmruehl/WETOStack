@@ -152,10 +152,17 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Suite</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="software_list.html">Software Listing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="attributes.html">Attributes of Tool Suite</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Capabilities</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Capabilities</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Quality</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="software_quality.html">Software Quality</a></li>
 </ul>
 
@@ -381,11 +388,58 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="capabilities">
 <h1>Capabilities<a class="headerlink" href="#capabilities" title="Permalink to this heading">#</a></h1>
-<p>This dashboard will outline typical workflows and capabilities involved
+<p>This dashboard outlines typical workflows and capabilities involved
 in wind energy system design and analysis using the WETO Software Suite.</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
-<p class="sd-card-text">System Design</p>
+<p class="sd-card-text">Plant Performance</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Plant performance analysis involves the simulation of power production
+for the collection of wind turbines in a wind farm given the atmospheric
+conditions over a period of time. The result is typically represented
+as Annual Energy Production (AEP) in Megawatthours (MWh), Gigawatthours (GWh),
+or Terrawatthours (TWh).</p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Wake Loss</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Wake loss modeling is the study of turbine-turbine interactions via wind turbine
+wakes. Typically, the interaction mechanism is energy loss due to a shadow in the
+wind speed behind a wind turbine, but other mechanisms such as influence on
+turbulence are also considered.</p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Rotor Optimization</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Rotor optimization focuses on the iterative design of the rotor components
+such as blades and control systems. This process typically involves modeling
+the aerodynamic loads and subsequent elastic response of the blade. This
+aero-elastic model is used within an optimization algorithm to arrive at
+rotor designs that meet a set of requirements.</p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Control Co-Design</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Control co-design is a method for advanced system designs that incorporate
+control systems into the structural and aerodynamic designs. The hardware
+and software systems are designed in a coupled sense rather than individually.
+The result is a blade that may only be operable or optimal with a specific
+controller, but the performance can be much greater than a decoupled design.</p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><span class="xref myst"></span></p>
 </div>
 <div class="sd-card-body docutils">
 <p class="sd-card-text">System design involves the high-level preliminary design of the power
@@ -393,50 +447,16 @@ generation systems and their connection to the grid. Additionally, cost
 models are incorporated here to identify an initial estimate of the cost
 of energy.</p>
 </div>
-<div class="sd-card-footer docutils">
-<div class="mermaid">
-            mindmap
-    root((System))
-        Blade, tower, turbine components
-            Turbine controls
-            Farm layout
-                Farm controls
-        Balance of station
-        Cost
-        </div></div>
 </div>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
-<p class="sd-card-text">Wind Turbine and Wind Farm Aerodynamics</p>
+<p class="sd-card-text"><span class="xref myst"></span></p>
 </div>
 <div class="sd-card-body docutils">
 <p class="sd-card-text">The detailed design of wind turbine components and wind farms is detailed
 here. This process typically involves modeling system components at varying
 levels of fidelity while moving through the design space.</p>
 </div>
-<div class="sd-card-footer docutils">
-<div class="mermaid">
-            flowchart TD
-    A[&quot;ExaWind
-    RANS/LES hybrid, time accurate, blade resolved&quot;]
-
-    B[&quot;AMR-Wind
-    LES, time accurate, actuator line&quot;]
-
-    C[&quot;WindSE
-    RANS, time accurate, actuator disk&quot;]
-
-    D[&quot;OpenFAST/FAST.Farm
-    Engineering models, time accurate, BEM, beam models&quot;]
-
-    E[&quot;FLORIS
-    Analytical, steady state&quot;]
-
-    A --- B
-    B --- C
-    C --- D
-    D --- E
-        </div></div>
 </div>
 <section id="wireframe-prototype">
 <h2>Wireframe prototype<a class="headerlink" href="#wireframe-prototype" title="Permalink to this heading">#</a></h2>
