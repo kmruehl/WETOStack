@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Attributes of Tool Suite &#8212; WETO Stack</title>
+    <title>Attributes &#8212; WETO Stack</title>
   
   
   
@@ -153,7 +153,8 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Suite</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="software_list.html">Software Listing</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Attributes of Tool Suite</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Attributes</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Capabilities</span></p>
 <ul class="nav bd-sidenav">
@@ -351,7 +352,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -362,11 +365,43 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Attributes of Tool Suite</h1>
+    <h1>Attributes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Attributes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-modeled">Physics modeled</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interfaces">Interfaces</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-descriptions">Attribute Descriptions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">General</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-domain">Physics domain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Interfaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-s">API’s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-output">Input / Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cli">CLI</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#community-health">Community Health</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -376,8 +411,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="attributes-of-tool-suite">
-<h1>Attributes of Tool Suite<a class="headerlink" href="#attributes-of-tool-suite" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="attributes">
+<h1>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading">#</a></h1>
+<p>A number of attributes have been identified in order to relate the various tools in the WETO
+portfolio to each other. The attributes are tabulated below for each tool included in this
+project. See <a class="reference internal" href="#attr-descriptions"><span class="std std-ref">Attribute Descriptions</span></a> for more information on each attribute and how it is
+obtained.</p>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -386,11 +425,85 @@ document.write(`
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
-
+<span class="kn">import</span> <span class="nn">yaml</span>
 <span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="kn">import</span> <span class="n">show</span><span class="p">,</span> <span class="n">output_notebook</span>
 <span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">ColumnDataSource</span><span class="p">,</span> <span class="n">DataTable</span><span class="p">,</span> <span class="n">DateFormatter</span><span class="p">,</span> <span class="n">TableColumn</span>
 
 <span class="n">output_notebook</span><span class="p">()</span>
+
+<span class="c1"># project_metadata = len(projects) * [None]</span>
+
+<span class="c1"># # Get all project metadata</span>
+<span class="c1"># for project in projects:</span>
+<span class="c1">#     yaml.l</span>
+
+<span class="c1"># # Retrieve the file content from the URL</span>
+<span class="c1"># response = requests.get(url, allow_redirects=True)</span>
+<span class="c1"># # Convert bytes to string</span>
+<span class="c1"># content = response.content.decode(&quot;utf-8&quot;)</span>
+<span class="c1"># # Load the yaml</span>
+<span class="c1"># content = yaml.safe_load(content)</span>
+
+<span class="c1"># from ghapi.all import GhApi</span>
+
+<span class="c1"># api = GhApi(owner=&quot;&quot;, repo=&quot;&quot;)</span>
+
+<span class="k">def</span> <span class="nf">create_field_name</span><span class="p">(</span><span class="n">field_string</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">field_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
+    <span class="n">capitalized</span> <span class="o">=</span> <span class="p">[</span><span class="n">part</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">]</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">capitalized</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">name</span>
+
+<span class="k">def</span> <span class="nf">create_data_table</span><span class="p">(</span><span class="n">fields</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">DataTable</span><span class="p">:</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">TableColumn</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="n">field</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">create_field_name</span><span class="p">(</span><span class="n">field</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fields</span>
+    <span class="p">]</span>
+    <span class="n">data_table</span> <span class="o">=</span> <span class="n">DataTable</span><span class="p">(</span>
+        <span class="n">index_position</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span>
+        <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span>
+        <span class="c1"># width=400,</span>
+        <span class="c1"># height=280,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">data_table</span>
+
+<span class="n">projects</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../weto_software.yaml&quot;</span><span class="p">),</span> <span class="n">yaml</span><span class="o">.</span><span class="n">SafeLoader</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># General</span>
+    <span class="s2">&quot;project_name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">project</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;github_account&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;github_account&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;github_repo&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;github_repo&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;primary_use&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;primary_use&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;active_funding&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;active_funding&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+
+    <span class="c1"># Physics</span>
+    <span class="s2">&quot;time_domain&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;time_domain&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;physics_scope&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;physics_scope&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;system_type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;physics_scope&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;system_location&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;system_location&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;loads&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;loads&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;governing_equations&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;governing_equations&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+
+    <span class="c1"># Distribution</span>
+    <span class="s2">&quot;supported_platforms&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;supported_platforms&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;package_manager&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;package_manager&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;package_manager_url&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;package_manager_url&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;installation_complexity&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;installation_complexity&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+
+    <span class="c1"># Documentation</span>
+    <span class="s2">&quot;documentation_url&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;documentation_url&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;user_docs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;user_docs&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;developer_docs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;developer_docs&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;api_docs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;api_docs&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;cli&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;cli&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;installation&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;installation&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;getting_started&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;getting_started&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;examples_tutorials&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;examples_tutorials&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;readability&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;readability&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+    <span class="s2">&quot;project_coverage&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;project_coverage&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()],</span>
+<span class="p">}</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">ColumnDataSource</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -687,6 +800,8 @@ if (force === true) {
 }(window));</script></div>
 </details>
 </div>
+<section id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -694,40 +809,7 @@ if (force === true) {
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-
-<span class="n">projects</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;weto_software.json&quot;</span><span class="p">))</span>
-
-<span class="n">project_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">project</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-<span class="n">github_account</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;github_account&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-<span class="n">github_repo</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;github_repo&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-<span class="n">active_funding</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;active_funding&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-<span class="n">scope</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;scope&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-<span class="n">primary_use</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;primary_use&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-<span class="n">time_domain</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;time_domain&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">projects</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;project_name&quot;</span><span class="p">:</span> <span class="n">project_name</span><span class="p">,</span>
-    <span class="s2">&quot;github_account&quot;</span><span class="p">:</span> <span class="n">github_account</span><span class="p">,</span>
-    <span class="s2">&quot;github_repo&quot;</span><span class="p">:</span> <span class="n">github_repo</span><span class="p">,</span>
-    <span class="s2">&quot;primary_use&quot;</span><span class="p">:</span> <span class="n">primary_use</span><span class="p">,</span>
-    <span class="s2">&quot;time_domain&quot;</span><span class="p">:</span> <span class="n">time_domain</span><span class="p">,</span>
-    <span class="s2">&quot;active_funding&quot;</span><span class="p">:</span> <span class="n">active_funding</span><span class="p">,</span>
-    <span class="s2">&quot;scope&quot;</span><span class="p">:</span> <span class="n">scope</span><span class="p">,</span>
-<span class="p">}</span>
-<span class="n">source</span> <span class="o">=</span> <span class="n">ColumnDataSource</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
-<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">TableColumn</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;project_name&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Name&quot;</span><span class="p">),</span>
-    <span class="n">TableColumn</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;github_account&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;GH Account&quot;</span><span class="p">),</span>
-    <span class="n">TableColumn</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;github_repo&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;GH Repo&quot;</span><span class="p">),</span>
-    <span class="n">TableColumn</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;primary_use&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Primary Use&quot;</span><span class="p">),</span>
-    <span class="n">TableColumn</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;time_domain&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Time Domain&quot;</span><span class="p">),</span>
-    <span class="n">TableColumn</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;active_funding&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Active Funding&quot;</span><span class="p">),</span>
-    <span class="n">TableColumn</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;scope&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Scope&quot;</span><span class="p">),</span>
-    <span class="c1"># TableColumn(field=&quot;dates&quot;, title=&quot;Date&quot;, formatter=DateFormatter()),</span>
-<span class="p">]</span>
-<span class="n">data_table</span> <span class="o">=</span> <span class="n">DataTable</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span> <span class="c1">#, width=400, height=280)</span>
-
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_table</span> <span class="o">=</span> <span class="n">create_data_table</span><span class="p">([</span><span class="s2">&quot;project_name&quot;</span><span class="p">,</span>  <span class="s2">&quot;github_account&quot;</span><span class="p">,</span>  <span class="s2">&quot;github_repo&quot;</span><span class="p">,</span>  <span class="s2">&quot;primary_use&quot;</span><span class="p">,</span>  <span class="s2">&quot;active_funding&quot;</span><span class="p">])</span>
 <span class="n">show</span><span class="p">(</span><span class="n">data_table</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -735,11 +817,11 @@ if (force === true) {
 </details>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="85eff3b6-e057-42f9-9e47-a3d2d92baa57" data-root-id="p1026" style="display: contents;"></div>
+  <div id="7a7172af-ea4b-42c9-96f5-80254b34f5d5" data-root-id="p1020" style="display: contents;"></div>
 </div><script type="application/javascript">(function(root) {
   function embed_document(root) {
-  const docs_json = {"aead8120-988e-4bc0-8b06-71a06c12d9f5":{"version":"3.1.0","title":"Bokeh Application","defs":[],"roots":[{"type":"object","name":"DataTable","id":"p1026","attributes":{"source":{"type":"object","name":"ColumnDataSource","id":"p1002","attributes":{"selected":{"type":"object","name":"Selection","id":"p1003","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1004"},"data":{"type":"map","entries":[["project_name",["FLORIS","FLASC","emu_python","moa_python","OpenFAST","SOWFA","Nalu-Wind","AMR-Wind","WISDEM"]],["github_account",["nrel","nrel","nrel","nrel","openfast","nrel","exawind","exawind","wisdem"]],["github_repo",["floris","flasc","emu_python","moa_python","openfast","sowfa","nalu-wind","amr-wind","wisdem"]],["primary_use",["physics","data_analysis","data_analysis","data_analysis","physics","physics","physics","physics","physics"]],["time_domain",["steady","n/a","n/a","n/a","dynamic","dynamic","dynamic","dynamic","dynamic"]],["active_funding",[true,true,true,true,true,true,true,true,true]],["scope",["farm","farm","farm","farm","turbine","farm","turbine","farm","system"]]]}}},"view":{"type":"object","name":"CDSView","id":"p1030","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1031"}}},"columns":[{"type":"object","name":"TableColumn","id":"p1005","attributes":{"field":"project_name","title":"Name","formatter":{"type":"object","name":"StringFormatter","id":"p1006"},"editor":{"type":"object","name":"StringEditor","id":"p1007"}}},{"type":"object","name":"TableColumn","id":"p1008","attributes":{"field":"github_account","title":"GH Account","formatter":{"type":"object","name":"StringFormatter","id":"p1009"},"editor":{"type":"object","name":"StringEditor","id":"p1010"}}},{"type":"object","name":"TableColumn","id":"p1011","attributes":{"field":"github_repo","title":"GH Repo","formatter":{"type":"object","name":"StringFormatter","id":"p1012"},"editor":{"type":"object","name":"StringEditor","id":"p1013"}}},{"type":"object","name":"TableColumn","id":"p1014","attributes":{"field":"primary_use","title":"Primary Use","formatter":{"type":"object","name":"StringFormatter","id":"p1015"},"editor":{"type":"object","name":"StringEditor","id":"p1016"}}},{"type":"object","name":"TableColumn","id":"p1017","attributes":{"field":"time_domain","title":"Time Domain","formatter":{"type":"object","name":"StringFormatter","id":"p1018"},"editor":{"type":"object","name":"StringEditor","id":"p1019"}}},{"type":"object","name":"TableColumn","id":"p1020","attributes":{"field":"active_funding","title":"Active Funding","formatter":{"type":"object","name":"StringFormatter","id":"p1021"},"editor":{"type":"object","name":"StringEditor","id":"p1022"}}},{"type":"object","name":"TableColumn","id":"p1023","attributes":{"field":"scope","title":"Scope","formatter":{"type":"object","name":"StringFormatter","id":"p1024"},"editor":{"type":"object","name":"StringEditor","id":"p1025"}}}]}}],"callbacks":{"type":"map"}}};
-  const render_items = [{"docid":"aead8120-988e-4bc0-8b06-71a06c12d9f5","roots":{"p1026":"85eff3b6-e057-42f9-9e47-a3d2d92baa57"},"root_ids":["p1026"]}];
+  const docs_json = {"78fde79e-76c7-422b-9d97-280dc34264f6":{"version":"3.1.0","title":"Bokeh Application","defs":[],"roots":[{"type":"object","name":"DataTable","id":"p1020","attributes":{"source":{"type":"object","name":"ColumnDataSource","id":"p1002","attributes":{"selected":{"type":"object","name":"Selection","id":"p1004","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["project_name",["FLORIS","FLASC","OpenFAST","WEIS"]],["github_account",["nrel","nrel","openfast","wisdem"]],["github_repo",["floris","flasc","openfast","weis"]],["primary_use",["physics","data analysis","physics","design"]],["active_funding",[true,true,true,true]],["time_domain",["steady",null,"unsteady","unsteady"]],["physics_scope",[["farm"],null,"turbine","turbine"]],["system_type",[["farm"],null,"turbine","turbine"]],["system_location",["any",null,["any"],["any"]]],["loads",[false,null,[true],[true]]],["governing_equations",[["steady-state analytical fluid dynamics"],null,["Blade Element Momentum Theory","Geomtrically Exact Beam Theory","Engineering models"],null]],["supported_platforms",[["any"],["any"],["any"],["macOS","Linux"]]],["package_manager",[["PyPI","conda-forge"],["PyPI"],["Homebrew","conda-forge"],null]],["package_manager_url",[["https://PyPI.org/project/FLORIS/","https://anaconda.org/conda-forge/floris"],["https://PyPI.org/project/FlASC/"],["https://formulae.brew.sh/formula/openfast","https://anaconda.org/conda-forge/openfast"],null]],["installation_complexity",[1,1,1,5]],["documentation_url",["https://nrel.github.io/floris/intro.html","https://flasc.readthedocs.io/","https://openfast.readthedocs.io/","https://weis.readthedocs.io/en/latest/"]],["user_docs",[true,true,true,false]],["developer_docs",[true,false,false,false]],["api_docs",[true,false,false,false]],["cli",[false,false,true,false]],["installation",[true,true,true,true]],["getting_started",[true,true,false,false]],["examples_tutorials",[true,true,false,true]],["readability",[7,null,5,null]],["project_coverage",[8,null,6,null]]]}}},"view":{"type":"object","name":"CDSView","id":"p1024","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1025"}}},"columns":[{"type":"object","name":"TableColumn","id":"p1005","attributes":{"field":"project_name","title":"Project Name","formatter":{"type":"object","name":"StringFormatter","id":"p1006"},"editor":{"type":"object","name":"StringEditor","id":"p1007"}}},{"type":"object","name":"TableColumn","id":"p1008","attributes":{"field":"github_account","title":"Github Account","formatter":{"type":"object","name":"StringFormatter","id":"p1009"},"editor":{"type":"object","name":"StringEditor","id":"p1010"}}},{"type":"object","name":"TableColumn","id":"p1011","attributes":{"field":"github_repo","title":"Github Repo","formatter":{"type":"object","name":"StringFormatter","id":"p1012"},"editor":{"type":"object","name":"StringEditor","id":"p1013"}}},{"type":"object","name":"TableColumn","id":"p1014","attributes":{"field":"primary_use","title":"Primary Use","formatter":{"type":"object","name":"StringFormatter","id":"p1015"},"editor":{"type":"object","name":"StringEditor","id":"p1016"}}},{"type":"object","name":"TableColumn","id":"p1017","attributes":{"field":"active_funding","title":"Active Funding","formatter":{"type":"object","name":"StringFormatter","id":"p1018"},"editor":{"type":"object","name":"StringEditor","id":"p1019"}}}],"index_position":null}}],"callbacks":{"type":"map"}}};
+  const render_items = [{"docid":"78fde79e-76c7-422b-9d97-280dc34264f6","roots":{"p1020":"7a7172af-ea4b-42c9-96f5-80254b34f5d5"},"root_ids":["p1020"]}];
   root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
   }
   if (root.Bokeh !== undefined) {
@@ -761,6 +843,396 @@ if (force === true) {
   }
 })(window);</script></div>
 </div>
+</section>
+<section id="physics-modeled">
+<h2>Physics modeled<a class="headerlink" href="#physics-modeled" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_table</span> <span class="o">=</span> <span class="n">create_data_table</span><span class="p">([</span><span class="s2">&quot;project_name&quot;</span><span class="p">,</span> <span class="s2">&quot;time_domain&quot;</span><span class="p">,</span> <span class="s2">&quot;physics_scope&quot;</span><span class="p">,</span> <span class="s2">&quot;system_type&quot;</span><span class="p">,</span> <span class="s2">&quot;system_location&quot;</span><span class="p">,</span> <span class="s2">&quot;loads&quot;</span><span class="p">,</span> <span class="s2">&quot;governing_equations&quot;</span><span class="p">])</span>
+<span class="n">show</span><span class="p">(</span><span class="n">data_table</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="2b7b1118-2693-4f2e-9907-52667d058763" data-root-id="p1137" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"c59ff363-133a-4bc1-97ca-261540b95dd3":{"version":"3.1.0","title":"Bokeh Application","defs":[],"roots":[{"type":"object","name":"DataTable","id":"p1137","attributes":{"source":{"type":"object","name":"ColumnDataSource","id":"p1002","attributes":{"selected":{"type":"object","name":"Selection","id":"p1004","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["project_name",["FLORIS","FLASC","OpenFAST","WEIS"]],["github_account",["nrel","nrel","openfast","wisdem"]],["github_repo",["floris","flasc","openfast","weis"]],["primary_use",["physics","data analysis","physics","design"]],["active_funding",[true,true,true,true]],["time_domain",["steady",null,"unsteady","unsteady"]],["physics_scope",[["farm"],null,"turbine","turbine"]],["system_type",[["farm"],null,"turbine","turbine"]],["system_location",["any",null,["any"],["any"]]],["loads",[false,null,[true],[true]]],["governing_equations",[["steady-state analytical fluid dynamics"],null,["Blade Element Momentum Theory","Geomtrically Exact Beam Theory","Engineering models"],null]],["supported_platforms",[["any"],["any"],["any"],["macOS","Linux"]]],["package_manager",[["PyPI","conda-forge"],["PyPI"],["Homebrew","conda-forge"],null]],["package_manager_url",[["https://PyPI.org/project/FLORIS/","https://anaconda.org/conda-forge/floris"],["https://PyPI.org/project/FlASC/"],["https://formulae.brew.sh/formula/openfast","https://anaconda.org/conda-forge/openfast"],null]],["installation_complexity",[1,1,1,5]],["documentation_url",["https://nrel.github.io/floris/intro.html","https://flasc.readthedocs.io/","https://openfast.readthedocs.io/","https://weis.readthedocs.io/en/latest/"]],["user_docs",[true,true,true,false]],["developer_docs",[true,false,false,false]],["api_docs",[true,false,false,false]],["cli",[false,false,true,false]],["installation",[true,true,true,true]],["getting_started",[true,true,false,false]],["examples_tutorials",[true,true,false,true]],["readability",[7,null,5,null]],["project_coverage",[8,null,6,null]]]}}},"view":{"type":"object","name":"CDSView","id":"p1141","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1142"}}},"columns":[{"type":"object","name":"TableColumn","id":"p1116","attributes":{"field":"project_name","title":"Project Name","formatter":{"type":"object","name":"StringFormatter","id":"p1117"},"editor":{"type":"object","name":"StringEditor","id":"p1118"}}},{"type":"object","name":"TableColumn","id":"p1119","attributes":{"field":"time_domain","title":"Time Domain","formatter":{"type":"object","name":"StringFormatter","id":"p1120"},"editor":{"type":"object","name":"StringEditor","id":"p1121"}}},{"type":"object","name":"TableColumn","id":"p1122","attributes":{"field":"physics_scope","title":"Physics Scope","formatter":{"type":"object","name":"StringFormatter","id":"p1123"},"editor":{"type":"object","name":"StringEditor","id":"p1124"}}},{"type":"object","name":"TableColumn","id":"p1125","attributes":{"field":"system_type","title":"System Type","formatter":{"type":"object","name":"StringFormatter","id":"p1126"},"editor":{"type":"object","name":"StringEditor","id":"p1127"}}},{"type":"object","name":"TableColumn","id":"p1128","attributes":{"field":"system_location","title":"System Location","formatter":{"type":"object","name":"StringFormatter","id":"p1129"},"editor":{"type":"object","name":"StringEditor","id":"p1130"}}},{"type":"object","name":"TableColumn","id":"p1131","attributes":{"field":"loads","title":"Loads","formatter":{"type":"object","name":"StringFormatter","id":"p1132"},"editor":{"type":"object","name":"StringEditor","id":"p1133"}}},{"type":"object","name":"TableColumn","id":"p1134","attributes":{"field":"governing_equations","title":"Governing Equations","formatter":{"type":"object","name":"StringFormatter","id":"p1135"},"editor":{"type":"object","name":"StringEditor","id":"p1136"}}}],"index_position":null}}],"callbacks":{"type":"map"}}};
+  const render_items = [{"docid":"c59ff363-133a-4bc1-97ca-261540b95dd3","roots":{"p1137":"2b7b1118-2693-4f2e-9907-52667d058763"},"root_ids":["p1137"]}];
+  root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script></div>
+</div>
+</section>
+<section id="distribution">
+<h2>Distribution<a class="headerlink" href="#distribution" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_table</span> <span class="o">=</span> <span class="n">create_data_table</span><span class="p">([</span><span class="s2">&quot;supported_platforms&quot;</span><span class="p">,</span> <span class="s2">&quot;package_manager&quot;</span><span class="p">,</span> <span class="s2">&quot;package_manager_url&quot;</span><span class="p">,</span> <span class="s2">&quot;installation_complexity&quot;</span><span class="p">])</span>
+<span class="n">show</span><span class="p">(</span><span class="n">data_table</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="7c971846-06da-4209-9960-f683403e0a5f" data-root-id="p1284" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"b3e8134f-d993-4e2e-9f3d-d2626866bd2c":{"version":"3.1.0","title":"Bokeh Application","defs":[],"roots":[{"type":"object","name":"DataTable","id":"p1284","attributes":{"source":{"type":"object","name":"ColumnDataSource","id":"p1002","attributes":{"selected":{"type":"object","name":"Selection","id":"p1004","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["project_name",["FLORIS","FLASC","OpenFAST","WEIS"]],["github_account",["nrel","nrel","openfast","wisdem"]],["github_repo",["floris","flasc","openfast","weis"]],["primary_use",["physics","data analysis","physics","design"]],["active_funding",[true,true,true,true]],["time_domain",["steady",null,"unsteady","unsteady"]],["physics_scope",[["farm"],null,"turbine","turbine"]],["system_type",[["farm"],null,"turbine","turbine"]],["system_location",["any",null,["any"],["any"]]],["loads",[false,null,[true],[true]]],["governing_equations",[["steady-state analytical fluid dynamics"],null,["Blade Element Momentum Theory","Geomtrically Exact Beam Theory","Engineering models"],null]],["supported_platforms",[["any"],["any"],["any"],["macOS","Linux"]]],["package_manager",[["PyPI","conda-forge"],["PyPI"],["Homebrew","conda-forge"],null]],["package_manager_url",[["https://PyPI.org/project/FLORIS/","https://anaconda.org/conda-forge/floris"],["https://PyPI.org/project/FlASC/"],["https://formulae.brew.sh/formula/openfast","https://anaconda.org/conda-forge/openfast"],null]],["installation_complexity",[1,1,1,5]],["documentation_url",["https://nrel.github.io/floris/intro.html","https://flasc.readthedocs.io/","https://openfast.readthedocs.io/","https://weis.readthedocs.io/en/latest/"]],["user_docs",[true,true,true,false]],["developer_docs",[true,false,false,false]],["api_docs",[true,false,false,false]],["cli",[false,false,true,false]],["installation",[true,true,true,true]],["getting_started",[true,true,false,false]],["examples_tutorials",[true,true,false,true]],["readability",[7,null,5,null]],["project_coverage",[8,null,6,null]]]}}},"view":{"type":"object","name":"CDSView","id":"p1288","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1289"}}},"columns":[{"type":"object","name":"TableColumn","id":"p1272","attributes":{"field":"supported_platforms","title":"Supported Platforms","formatter":{"type":"object","name":"StringFormatter","id":"p1273"},"editor":{"type":"object","name":"StringEditor","id":"p1274"}}},{"type":"object","name":"TableColumn","id":"p1275","attributes":{"field":"package_manager","title":"Package Manager","formatter":{"type":"object","name":"StringFormatter","id":"p1276"},"editor":{"type":"object","name":"StringEditor","id":"p1277"}}},{"type":"object","name":"TableColumn","id":"p1278","attributes":{"field":"package_manager_url","title":"Package Manager Url","formatter":{"type":"object","name":"StringFormatter","id":"p1279"},"editor":{"type":"object","name":"StringEditor","id":"p1280"}}},{"type":"object","name":"TableColumn","id":"p1281","attributes":{"field":"installation_complexity","title":"Installation Complexity","formatter":{"type":"object","name":"StringFormatter","id":"p1282"},"editor":{"type":"object","name":"StringEditor","id":"p1283"}}}],"index_position":null}}],"callbacks":{"type":"map"}}};
+  const render_items = [{"docid":"b3e8134f-d993-4e2e-9f3d-d2626866bd2c","roots":{"p1284":"7c971846-06da-4209-9960-f683403e0a5f"},"root_ids":["p1284"]}];
+  root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script></div>
+</div>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_table</span> <span class="o">=</span> <span class="n">create_data_table</span><span class="p">([</span><span class="s2">&quot;documentation_url&quot;</span><span class="p">,</span> <span class="s2">&quot;user_docs&quot;</span><span class="p">,</span> <span class="s2">&quot;developer_docs&quot;</span><span class="p">,</span> <span class="s2">&quot;api_docs&quot;</span><span class="p">,</span> <span class="s2">&quot;cli&quot;</span><span class="p">,</span> <span class="s2">&quot;installation&quot;</span><span class="p">,</span> <span class="s2">&quot;getting_started&quot;</span><span class="p">,</span> <span class="s2">&quot;examples_tutorials&quot;</span><span class="p">,</span> <span class="s2">&quot;readability&quot;</span><span class="p">,</span> <span class="s2">&quot;project_coverage&quot;</span><span class="p">])</span>
+<span class="n">show</span><span class="p">(</span><span class="n">data_table</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="a7d9e9c1-f3a5-4639-adda-bb96765f048d" data-root-id="p1432" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"59f9002d-79dd-409d-954a-8228cec833ed":{"version":"3.1.0","title":"Bokeh Application","defs":[],"roots":[{"type":"object","name":"DataTable","id":"p1432","attributes":{"source":{"type":"object","name":"ColumnDataSource","id":"p1002","attributes":{"selected":{"type":"object","name":"Selection","id":"p1004","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["project_name",["FLORIS","FLASC","OpenFAST","WEIS"]],["github_account",["nrel","nrel","openfast","wisdem"]],["github_repo",["floris","flasc","openfast","weis"]],["primary_use",["physics","data analysis","physics","design"]],["active_funding",[true,true,true,true]],["time_domain",["steady",null,"unsteady","unsteady"]],["physics_scope",[["farm"],null,"turbine","turbine"]],["system_type",[["farm"],null,"turbine","turbine"]],["system_location",["any",null,["any"],["any"]]],["loads",[false,null,[true],[true]]],["governing_equations",[["steady-state analytical fluid dynamics"],null,["Blade Element Momentum Theory","Geomtrically Exact Beam Theory","Engineering models"],null]],["supported_platforms",[["any"],["any"],["any"],["macOS","Linux"]]],["package_manager",[["PyPI","conda-forge"],["PyPI"],["Homebrew","conda-forge"],null]],["package_manager_url",[["https://PyPI.org/project/FLORIS/","https://anaconda.org/conda-forge/floris"],["https://PyPI.org/project/FlASC/"],["https://formulae.brew.sh/formula/openfast","https://anaconda.org/conda-forge/openfast"],null]],["installation_complexity",[1,1,1,5]],["documentation_url",["https://nrel.github.io/floris/intro.html","https://flasc.readthedocs.io/","https://openfast.readthedocs.io/","https://weis.readthedocs.io/en/latest/"]],["user_docs",[true,true,true,false]],["developer_docs",[true,false,false,false]],["api_docs",[true,false,false,false]],["cli",[false,false,true,false]],["installation",[true,true,true,true]],["getting_started",[true,true,false,false]],["examples_tutorials",[true,true,false,true]],["readability",[7,null,5,null]],["project_coverage",[8,null,6,null]]]}}},"view":{"type":"object","name":"CDSView","id":"p1436","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1437"}}},"columns":[{"type":"object","name":"TableColumn","id":"p1402","attributes":{"field":"documentation_url","title":"Documentation Url","formatter":{"type":"object","name":"StringFormatter","id":"p1403"},"editor":{"type":"object","name":"StringEditor","id":"p1404"}}},{"type":"object","name":"TableColumn","id":"p1405","attributes":{"field":"user_docs","title":"User Docs","formatter":{"type":"object","name":"StringFormatter","id":"p1406"},"editor":{"type":"object","name":"StringEditor","id":"p1407"}}},{"type":"object","name":"TableColumn","id":"p1408","attributes":{"field":"developer_docs","title":"Developer Docs","formatter":{"type":"object","name":"StringFormatter","id":"p1409"},"editor":{"type":"object","name":"StringEditor","id":"p1410"}}},{"type":"object","name":"TableColumn","id":"p1411","attributes":{"field":"api_docs","title":"Api Docs","formatter":{"type":"object","name":"StringFormatter","id":"p1412"},"editor":{"type":"object","name":"StringEditor","id":"p1413"}}},{"type":"object","name":"TableColumn","id":"p1414","attributes":{"field":"cli","title":"Cli","formatter":{"type":"object","name":"StringFormatter","id":"p1415"},"editor":{"type":"object","name":"StringEditor","id":"p1416"}}},{"type":"object","name":"TableColumn","id":"p1417","attributes":{"field":"installation","title":"Installation","formatter":{"type":"object","name":"StringFormatter","id":"p1418"},"editor":{"type":"object","name":"StringEditor","id":"p1419"}}},{"type":"object","name":"TableColumn","id":"p1420","attributes":{"field":"getting_started","title":"Getting Started","formatter":{"type":"object","name":"StringFormatter","id":"p1421"},"editor":{"type":"object","name":"StringEditor","id":"p1422"}}},{"type":"object","name":"TableColumn","id":"p1423","attributes":{"field":"examples_tutorials","title":"Examples Tutorials","formatter":{"type":"object","name":"StringFormatter","id":"p1424"},"editor":{"type":"object","name":"StringEditor","id":"p1425"}}},{"type":"object","name":"TableColumn","id":"p1426","attributes":{"field":"readability","title":"Readability","formatter":{"type":"object","name":"StringFormatter","id":"p1427"},"editor":{"type":"object","name":"StringEditor","id":"p1428"}}},{"type":"object","name":"TableColumn","id":"p1429","attributes":{"field":"project_coverage","title":"Project Coverage","formatter":{"type":"object","name":"StringFormatter","id":"p1430"},"editor":{"type":"object","name":"StringEditor","id":"p1431"}}}],"index_position":null}}],"callbacks":{"type":"map"}}};
+  const render_items = [{"docid":"59f9002d-79dd-409d-954a-8228cec833ed","roots":{"p1432":"a7d9e9c1-f3a5-4639-adda-bb96765f048d"},"root_ids":["p1432"]}];
+  root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script></div>
+</div>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="interfaces">
+<h2>Interfaces<a class="headerlink" href="#interfaces" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="attribute-descriptions">
+<span id="attr-descriptions"></span><h1>Attribute Descriptions<a class="headerlink" href="#attribute-descriptions" title="Permalink to this heading">#</a></h1>
+<p>We need a way to relate software projects to each other to understand how the combination of
+software projects defines the landscape of WETO funded software. These attributes are intended
+to answer questions about the health, quality, and maturity of the portfolio.</p>
+<section id="id1">
+<h2>General<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Parent Project:</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Source code URL</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Funding status</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Funding history including amounts and agencies</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Last Commit Date</p>
+<ul>
+<li><p>git / GitHub</p></li>
+</ul>
+</li>
+<li><p>Last Release Date</p>
+<ul>
+<li><p>GitHub</p></li>
+</ul>
+</li>
+<li><p>First Release Date</p>
+<ul>
+<li><p>GitHub</p></li>
+</ul>
+</li>
+<li><p>Active development?</p>
+<ul>
+<li><p>User supplied</p></li>
+<li><p>Possibility to determine a metric and automate</p></li>
+</ul>
+</li>
+<li><p>Primary programming langauge</p>
+<ul>
+<li><p>GitHub</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="physics-domain">
+<h2>Physics domain<a class="headerlink" href="#physics-domain" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Time domain</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Loads</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Scope (Turbine, farm, system, Land-based, offshore, or both)</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Listing of governing equations or assumptions</p>
+<ul>
+<li><p>User supplied</p>
+<ul>
+<li><p>i.e. finite elements structural model, timoshenko vs euler beam, BEM, RANS vs LES</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id2">
+<h2>Distribution<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Supported platforms (OS or ecosystem)</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Package manager?</p>
+<ul>
+<li><p>User configure link to third party, automated retrieval</p></li>
+<li><p>GitHub Release, PyPI, APT, Homebrew, etc</p></li>
+</ul>
+</li>
+<li><p>Level of complexity from start to finish</p>
+<ul>
+<li><p>User provided</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id3">
+<h2>Documentation<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>User docs</p>
+<ul>
+<li><p>User configure link to third party, automated retrieval</p></li>
+</ul>
+</li>
+<li><p>Developer docs</p>
+<ul>
+<li><p>User configure link to third party, automated retrieval</p></li>
+</ul>
+</li>
+<li><p>API docs</p>
+<ul>
+<li><p>User configure link to third party, automated retrieval</p></li>
+</ul>
+</li>
+<li><p>Installation</p>
+<ul>
+<li><p>User configure link to third party, automated retrieval</p></li>
+</ul>
+</li>
+<li><p>Getting started</p>
+<ul>
+<li><p>User configure link to third party, automated retrieval</p></li>
+</ul>
+</li>
+<li><p>Examples / Tutorials</p>
+<ul>
+<li><p>User configure link to third party, automated retrieval</p></li>
+</ul>
+</li>
+<li><p>Quality of composition</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Portion of code covered</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id4">
+<h2>Testing<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Automated testing</p>
+<ul>
+<li><p>User configure link to third party, automated retrieval</p></li>
+</ul>
+</li>
+<li><p>Continuous testing</p>
+<ul>
+<li><p>User configure link to third party, automated retrieval</p></li>
+</ul>
+</li>
+<li><p>Regression tests</p>
+<ul>
+<li><p>User configure link to third party, automated retrieval</p></li>
+</ul>
+</li>
+<li><p>Unit tests</p>
+<ul>
+<li><p>User configure link to third party, automated retrieval</p></li>
+</ul>
+</li>
+<li><p>Documented</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Speed / performance impacts</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id5">
+<h2>Interfaces<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Included interfaces to other languages</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+</ul>
+<section id="api-s">
+<h3>API’s<a class="headerlink" href="#api-s" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Documentation status</p></li>
+<li><p>Design communicated?</p></li>
+<li><p>How comprehensive?</p>
+<ul>
+<li><p>How much of the code can you reach via a public API?</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="input-output">
+<h3>Input / Output<a class="headerlink" href="#input-output" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Stable file structure?</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Custom file type or using a common convention?</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="cli">
+<h3>CLI<a class="headerlink" href="#cli" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Documented?</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+<li><p>Relevant and clear flags?</p>
+<ul>
+<li><p>User supplied</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="community-health">
+<h2>Community Health<a class="headerlink" href="#community-health" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Open Issues</p></li>
+<li><p>Open Pull Requests</p></li>
+<li><p>Open Discussions</p></li>
+<li><p>Average open time since last release</p></li>
+<li><p>Discussion / Issue response rate</p></li>
+<li><p>Code review rate (time between PR ready for review and first comment)</p></li>
+<li><p>Contributors outside of parent org</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -815,6 +1287,44 @@ if (force === true) {
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Attributes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-modeled">Physics modeled</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interfaces">Interfaces</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-descriptions">Attribute Descriptions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">General</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-domain">Physics domain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Interfaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-s">API’s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-output">Input / Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cli">CLI</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#community-health">Community Health</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
