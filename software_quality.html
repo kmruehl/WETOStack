@@ -61,6 +61,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'software_quality';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -650,7 +652,8 @@ a given event. The practice of releasing a software package after a tagged relea
 also known as “CI”. Tools for this level of automatic are common, and a practical choice
 is <a class="reference external" href="https://github.com/features/actions">GitHub Actions</a>. A typical CI pipeline for a Python
 package is shown below where the square components are GitHub Actions steps.</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<div class="mermaid">
+            graph LR
 
     A((&quot;
     GitHub Event
@@ -675,9 +678,7 @@ package is shown below where the square components are GitHub Actions steps.</p>
     C --&gt;|Yes| F
     E --&gt; G
     F --&gt; H
-</pre></div>
-</div>
-<p>What is the barrier to entry for practitioners and developers? Are practitioners expected to have
+        </div><p>What is the barrier to entry for practitioners and developers? Are practitioners expected to have
 programming knowledge and domain-specific knowledge?
 Ideally, practitioners are expected or assumed to have a reasonable amount of domain knowledge,
 but in most cases very little computer programming knowledge is expected. The exception is in HPC

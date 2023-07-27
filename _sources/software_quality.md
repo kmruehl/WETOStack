@@ -185,7 +185,7 @@ also known as "CI". Tools for this level of automatic are common, and a practica
 is [GitHub Actions](https://github.com/features/actions). A typical CI pipeline for a Python
 package is shown below where the square components are GitHub Actions steps.
 
-```mermaid
+```{mermaid}
 graph LR
 
     A(("
