@@ -126,7 +126,9 @@ This is an example of a barrier to entry often encountered by early-career resea
 experienced practitioners alike. In order to improve accessibility, it is important to
 understand the experience of users and design software to meet their needs.
 
-**BP: Identify target user profiles and anticipate their levels of understanding. Accurately understand the complixity of the systems used to access the software, and evaluate whether this matched the expected skills in target users.**
+**BP: Identify target user profiles and anticipate their levels of understanding. Accurately
+understand the complixity of the systems used to access the software, and evaluate whether
+this matches the expected skills in target users.**
 
 Some examples of common barriers to entry are:
 
@@ -145,9 +147,10 @@ Some examples of common barriers to entry are:
 
 Research computing software often depend on third-party libraries, and many of these dependencies
 are research software themselves. Therefore, the installation and environment configuration
-for this type of software can easily become complicated.
+for this type of software can easily become complex.
 
-**BP: It is the responsibility of developers to provide a streamlined method of installation. Use common software distribution systems, and automate the process as much as practical.**
+**BP: It is the responsibility of developers to provide a streamlined method of installation using
+common software distribution systems and automation as much as practical.**
 
 Mature package managers are a great resource since they have a distribution system already in place
 and manage dependencies between software tools.
@@ -173,6 +176,43 @@ The ecosystem of open source software package managers has coalesced around a fe
     - Platform: Ubiquitous for Linux for system-level or generic packages
 - [Fortran package manager (FPM)](https://fpm.fortran-lang.org/index.html)
     - Fortran-specific executable and library package manager.
+
+The process for including a package in a package management system varies, but all are designed
+to integrate with automated systems to prepare and distribute the package automatically upon
+a given event. The practice of releasing a software package after a tagged release
+(see [](version_control)) or requisite set of changes is called "continuous integration",
+also known as "CI". Tools for this level of automatic are common, and a practical choice
+is [GitHub Actions](https://github.com/features/actions). A typical CI pipeline for a Python
+package is shown below where the square components are GitHub Actions steps.
+
+```mermaid
+graph LR
+
+    A(("
+    GitHub Event
+    (i.e. release)
+    "))
+    subgraph Continous Testing
+        B["Run test suite"]
+    end
+    C{"Pass?"}
+    D["Notify author"]
+    subgraph Continous Deployment
+        E["Build for conda"]
+        F["Build for PyPI"]
+        G["Publish to conda-forge"]
+        H["Publish to PyPI"]
+    end
+
+    A --> B
+    B --> C
+    C -->|No| D
+    C -->|Yes| E
+    C -->|Yes| F
+    E --> G
+    F --> H
+```
+
 
 What is the barrier to entry for practitioners and developers? Are practitioners expected to have
 programming knowledge and domain-specific knowledge?
@@ -286,6 +326,7 @@ GitHub contains some key features for coordinating software development:
 - Pull request and code review
 - Project boards
 
+(version_control)=
 ### Version control
 
 Version control, typically with `git`, is a tool for tracking the evolution of a project change
