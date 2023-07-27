@@ -378,11 +378,12 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Best Practices and Expectations</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contexts">Contexts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility">Accessibility</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barrier-to-entry">Barrier to entry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisite-knowledge">Prerequisite knowledge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">Distribution</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usability">Usability</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extensibility">Extensibility</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extendability">Extendability</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approachable-style">Approachable style</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collaborative-workflows">Collaborative workflows</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">Version control</a></li>
@@ -489,30 +490,31 @@ into the following sections:</p>
 <li><p><a class="reference internal" href="#contexts" id="id6">Contexts</a></p></li>
 <li><p><a class="reference internal" href="#accessibility" id="id7">Accessibility</a></p>
 <ul>
-<li><p><a class="reference internal" href="#barrier-to-entry" id="id8">Barrier to entry</a></p></li>
+<li><p><a class="reference internal" href="#prerequisite-knowledge" id="id8">Prerequisite knowledge</a></p></li>
+<li><p><a class="reference internal" href="#distribution" id="id9">Distribution</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#usability" id="id9">Usability</a></p></li>
-<li><p><a class="reference internal" href="#extensibility" id="id10">Extensibility</a></p>
+<li><p><a class="reference internal" href="#usability" id="id10">Usability</a></p></li>
+<li><p><a class="reference internal" href="#extendability" id="id11">Extendability</a></p>
 <ul>
-<li><p><a class="reference internal" href="#approachable-style" id="id11">Approachable style</a></p></li>
-<li><p><a class="reference internal" href="#collaborative-workflows" id="id12">Collaborative workflows</a></p></li>
-<li><p><a class="reference internal" href="#version-control" id="id13">Version control</a></p></li>
-<li><p><a class="reference internal" href="#pull-requests" id="id14">Pull Requests</a></p></li>
+<li><p><a class="reference internal" href="#approachable-style" id="id12">Approachable style</a></p></li>
+<li><p><a class="reference internal" href="#collaborative-workflows" id="id13">Collaborative workflows</a></p></li>
+<li><p><a class="reference internal" href="#version-control" id="id14">Version control</a></p></li>
+<li><p><a class="reference internal" href="#pull-requests" id="id15">Pull Requests</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#long-term-sustainability" id="id15">Long term sustainability</a></p></li>
-<li><p><a class="reference internal" href="#accuracy" id="id16">Accuracy</a></p></li>
-<li><p><a class="reference internal" href="#methodologies-for-communicating-intent-and-verifying-implementation" id="id17">Methodologies for communicating intent and verifying implementation</a></p></li>
-<li><p><a class="reference internal" href="#appendix-the-engineer-behind-the-code" id="id18">Appendix - The “engineer” behind the code</a></p></li>
-<li><p><a class="reference internal" href="#ideas" id="id19">Ideas</a></p>
+<li><p><a class="reference internal" href="#long-term-sustainability" id="id16">Long term sustainability</a></p></li>
+<li><p><a class="reference internal" href="#accuracy" id="id17">Accuracy</a></p></li>
+<li><p><a class="reference internal" href="#methodologies-for-communicating-intent-and-verifying-implementation" id="id18">Methodologies for communicating intent and verifying implementation</a></p></li>
+<li><p><a class="reference internal" href="#appendix-the-engineer-behind-the-code" id="id19">Appendix - The “engineer” behind the code</a></p></li>
+<li><p><a class="reference internal" href="#ideas" id="id20">Ideas</a></p>
 <ul>
-<li><p><a class="reference internal" href="#style" id="id20">Style</a></p></li>
+<li><p><a class="reference internal" href="#style" id="id21">Style</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#notes" id="id21">Notes</a></p></li>
+<li><p><a class="reference internal" href="#notes" id="id22">Notes</a></p></li>
 </ul>
 </nav>
 <p>The information is aggregated from experience within WETO-supprted software development
@@ -531,8 +533,8 @@ it might as well not exist.
 <h2><a class="toc-backref" href="#id6" role="doc-backlink">Contexts</a><a class="headerlink" href="#contexts" title="Permalink to this heading">#</a></h2>
 <p>consider two kinds of “users”:</p>
 <ul class="simple">
-<li><p>Developers</p></li>
-<li><p>Practitioners</p></li>
+<li><p>Developers - write new code or modify existing code including infrastructure and documentation</p></li>
+<li><p>Practitioners - execute the software either directly or as a part of another system</p></li>
 </ul>
 <p>Why we care about software quality</p>
 <ul class="simple">
@@ -543,21 +545,101 @@ it might as well not exist.
 </section>
 <section id="accessibility">
 <span id="id1"></span><h2><a class="toc-backref" href="#id7" role="doc-backlink">Accessibility</a><a class="headerlink" href="#accessibility" title="Permalink to this heading">#</a></h2>
-<p>Accessibility is concerned with how users who will execute the software either directly or as
-part of another system are expected to obtain and integrate it into their processes. The product
-that is to be obtained is the executable version of the software. In the case of compiled
-programming languages, this is a binary executable or library file, while interpreted languages
-typically require distributing the source code directly.</p>
-<p>For guidance on developer accessibility, see <a class="reference internal" href="#extensibility"><span class="std std-ref">Extensibility</span></a>.</p>
-<p>How will developers get the required tools like dependencies or other development tools?
-Are all tools available for all supported operating systems? Does the software run on both
-personal computers and super computers?</p>
-<p>Nuances of research software:
-- The code itself is often the “front end” so complicated interfaces can’t hide behind an app
-- The infrastructure for distribution (i.e. installation) is much. more hands-on than say an app store or browser
-- Users expect the balance between stability and control to lean toward control whereas users expect commercial software to lean toward stability.</p>
-<section id="barrier-to-entry">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Barrier to entry</a><a class="headerlink" href="#barrier-to-entry" title="Permalink to this heading">#</a></h3>
+<p>Accessibility is concerned with how practitioners are expected to obtain and integrate a software
+into their processes. The product that is to be obtained is the executable version of the software.
+In the case of compiled programming languages, this is a binary executable or library file,
+while interpreted languages typically require distributing the source code directly.</p>
+<p>For guidance on developer accessibility, see <a class="reference internal" href="#extendability"><span class="std std-ref">Extendability</span></a>.</p>
+<p>Summary:</p>
+<ul class="simple">
+<li><p>Determine the expected or targeted user profile up front and address accessibility accordingly</p>
+<ul>
+<li><p>Domain experts will need less hand holding than graduate students or the general public</p></li>
+</ul>
+</li>
+<li><p>Automate accessibility</p></li>
+</ul>
+<section id="prerequisite-knowledge">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Prerequisite knowledge</a><a class="headerlink" href="#prerequisite-knowledge" title="Permalink to this heading">#</a></h3>
+<p>Using a computer in a scientific context is a learned skill and requires years of practice to
+become proficient. Tools like a “terminal”, “shell”, or “command prompt” are not initially
+intuitive, and that these three terms are used interchangeably can lead to further confusion.
+This is an example of a barrier to entry often encountered by early-career researchers and
+experienced practitioners alike. In order to improve accessibility, it is important to
+understand the experience of users and design software to meet their needs.</p>
+<p><strong>BP: Identify target user profiles and anticipate their levels of understanding. Accurately understand the complixity of the systems used to access the software, and evaluate whether this matched the expected skills in target users.</strong></p>
+<p>Some examples of common barriers to entry are:</p>
+<ul class="simple">
+<li><p>Navigating a “terminal”</p></li>
+<li><p>Knowledge of acryonyms, jargon, or interchangeable phrases</p>
+<ul>
+<li><p>CLI, API, IDE, etc</p></li>
+<li><p>Compile, clone, check out</p></li>
+<li><p>Terminal vs shell vs command prompt</p></li>
+</ul>
+</li>
+<li><p>Extensions: <code class="docutils literal notranslate"><span class="pre">.exe</span></code>, <code class="docutils literal notranslate"><span class="pre">.so</span></code>, <code class="docutils literal notranslate"><span class="pre">.dll</span></code>, <code class="docutils literal notranslate"><span class="pre">.dylib</span></code></p></li>
+<li><p>Installation:</p>
+<ul>
+<li><p>Package managers</p></li>
+<li><p>Downloading executable files</p></li>
+<li><p>Configuring an environment</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="distribution">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Distribution</a><a class="headerlink" href="#distribution" title="Permalink to this heading">#</a></h3>
+<p>Research computing software often depend on third-party libraries, and many of these dependencies
+are research software themselves. Therefore, the installation and environment configuration
+for this type of software can easily become complicated.</p>
+<p><strong>BP: It is the responsibility of developers to provide a streamlined method of installation. Use common software distribution systems, and automate the process as much as practical.</strong></p>
+<p>Mature package managers are a great resource since they have a distribution system already in place
+and manage dependencies between software tools.</p>
+<p>The ecosystem of open source software package managers has coalesced around a few primary tools:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org">Python Package Index (PyPI)</a></p>
+<ul>
+<li><p>Source and binary distribution package manager for Python software</p></li>
+<li><p>Platform: any</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://docs.conda.io/en/latest/">Conda</a></p>
+<ul>
+<li><p>Package, dependency and environment management for any language</p></li>
+<li><p>Platform: any</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://conda-forge.org">Conda-forge</a></p>
+<ul>
+<li><p>A community-led collection of recipes, build infrastructure and distributions for the conda package manager</p></li>
+<li><p>Platform: any</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://brew.sh">Homebrew (brew)</a></p>
+<ul>
+<li><p>The Missing Package Manager for macOS (or Linux)</p></li>
+<li><p>Platform: Ubiquitous for macOS, but also available for Linux</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://spack.io">Spack</a></p>
+<ul>
+<li><p>Spack is a package manager for supercomputers supporting any language and distributable product</p></li>
+<li><p>Platform: Ubiquitous for Linux-based supercomputers, and also available for macOS and Linux</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/APT_(software)">APT</a></p>
+<ul>
+<li><p>A user interface that works with core libraries to handle the installation and removal of software on Debian, and Debian-based Linux distributions</p></li>
+<li><p>Platform: Ubiquitous for Linux for system-level or generic packages</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://fpm.fortran-lang.org/index.html">Fortran package manager (FPM)</a></p>
+<ul>
+<li><p>Fortran-specific executable and library package manager.</p></li>
+</ul>
+</li>
+</ul>
 <p>What is the barrier to entry for practitioners and developers? Are practitioners expected to have
 programming knowledge and domain-specific knowledge?
 Ideally, practitioners are expected or assumed to have a reasonable amount of domain knowledge,
@@ -567,10 +649,14 @@ configuration is assumed.</p>
 <p>How will developers get the required tools like dependencies or other development tools?
 Are all tools available for all supported operating systems?
 Does the software run on both personal computers and super computers?</p>
+<p>Nuances of research software:
+- The code itself is often the “front end” so complicated interfaces can’t hide behind an app
+- The infrastructure for distribution (i.e. installation) is much. more hands-on than say an app store or browser
+- Users expect the balance between stability and control to lean toward control whereas users expect commercial software to lean toward stability.</p>
 </section>
 </section>
 <section id="usability">
-<span id="id2"></span><h2><a class="toc-backref" href="#id9" role="doc-backlink">Usability</a><a class="headerlink" href="#usability" title="Permalink to this heading">#</a></h2>
+<span id="id2"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink">Usability</a><a class="headerlink" href="#usability" title="Permalink to this heading">#</a></h2>
 <p>Usability is concerned with how people run the software.</p>
 <p>Nuances of research software:
 - “Design” is typically not a consideration at all
@@ -591,10 +677,21 @@ For example, the path where an operation should be performed need not be precede
 <li><p>API’s
 Documentation</p></li>
 </ul>
+<p>Clear error messages:</p>
+<ul class="simple">
+<li><p>Don’t expect users to have your context! Include a stack trace in your error messages or at least
+the calling function name</p></li>
+<li><p>Put yourself in the shoes of the user and anticipate needs</p>
+<ul>
+<li><p>What will you be thinking about when this error pops up?</p></li>
+<li><p>What will you want to do next?</p></li>
+</ul>
+</li>
+</ul>
 </section>
-<section id="extensibility">
-<span id="id3"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink">Extensibility</a><a class="headerlink" href="#extensibility" title="Permalink to this heading">#</a></h2>
-<p>Extensibility is concerned with how the software is extended to add make improvements such as
+<section id="extendability">
+<span id="id3"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink">Extendability</a><a class="headerlink" href="#extendability" title="Permalink to this heading">#</a></h2>
+<p>Extendability is concerned with how the software is extended to add make improvements such as
 new features and bug fixes.</p>
 <p>Is the code open source?
 Are binaries available?
@@ -606,8 +703,8 @@ i.e. Makefiles are outdated, use CMake</p>
 In other words, don’t be clever.</p>
 <p>This is closely tied to <strong>(6) methodologies for communicating intent and verifying implementation</strong></p>
 <section id="approachable-style">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">Approachable style</a><a class="headerlink" href="#approachable-style" title="Permalink to this heading">#</a></h3>
-<p>An extensible software is approachable. Convoluted code is difficult to understand quickly. Understand what it means to “grok” and strive to construct software that can be easily grokked (<a class="reference external" href="https://en.wikipedia.org/wiki/Grok">https://en.wikipedia.org/wiki/Grok</a>).</p>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Approachable style</a><a class="headerlink" href="#approachable-style" title="Permalink to this heading">#</a></h3>
+<p>An extendable software is approachable. Convoluted code is difficult to understand quickly. Understand what it means to “grok” and strive to construct software that can be easily grokked (<a class="reference external" href="https://en.wikipedia.org/wiki/Grok">https://en.wikipedia.org/wiki/Grok</a>).</p>
 <blockquote>
 <div><p><em>Grok</em> means “to understand”, of course, but Dr. Mahmoud, who might be termed the leading Terran expert on Martians, explains that it also means, “to drink” and “a hundred other English words, words which we think of as antithetical concepts. ‘Grok’ means <em>all</em> of these. It means ‘fear’, it means ‘love’, it means ‘hate’ – proper hate, for by the Martian ‘map’ you cannot hate anything unless you grok it, understand it so thoroughly that you merge with it and it merges with you – then you can hate it. By hating yourself. But this implies that you love it, too, and cherish it and would not have it otherwise. Then you can <em>hate</em> – and (I think) Martian hate is an emotion so black that the nearest human equivalent could only be called mild distaste.</p>
 </div></blockquote>
@@ -638,7 +735,7 @@ In other words, don’t be clever.</p>
 </div>
 </section>
 <section id="collaborative-workflows">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">Collaborative workflows</a><a class="headerlink" href="#collaborative-workflows" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Collaborative workflows</a><a class="headerlink" href="#collaborative-workflows" title="Permalink to this heading">#</a></h3>
 <p>The process for collaborating with other developers is essential to define and optimize.
 Version control must be in place, and it is best to use <code class="docutils literal notranslate"><span class="pre">git</span></code> since it is ubiquitous.
 While git is decentralized so repositories can be stored on any system, GitHub is the most
@@ -652,7 +749,7 @@ GitHub contains some key features for coordinating software development:</p>
 </ul>
 </section>
 <section id="version-control">
-<h3><a class="toc-backref" href="#id13" role="doc-backlink">Version control</a><a class="headerlink" href="#version-control" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Version control</a><a class="headerlink" href="#version-control" title="Permalink to this heading">#</a></h3>
 <p>Version control, typically with <code class="docutils literal notranslate"><span class="pre">git</span></code>, is a tool for tracking the evolution of a project change
 by change.
 The git history is meaningful for our future selves.
@@ -710,7 +807,7 @@ It automatically takes the titles of each pull request to construct the release 
 to users and downstream dependencies.</p>
 </section>
 <section id="pull-requests">
-<h3><a class="toc-backref" href="#id14" role="doc-backlink">Pull Requests</a><a class="headerlink" href="#pull-requests" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Pull Requests</a><a class="headerlink" href="#pull-requests" title="Permalink to this heading">#</a></h3>
 <p>A pull request is a request to merge a particular set of code changes into another copy of the
 software, typically an agreed upon “main” version.</p>
 <p>Pull requests should include contextual information regarding the code change. The intention is
@@ -720,7 +817,7 @@ the change and a description of why the change is valid and well tested.</p>
 </section>
 </section>
 <section id="long-term-sustainability">
-<span id="sustainability"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink">Long term sustainability</a><a class="headerlink" href="#long-term-sustainability" title="Permalink to this heading">#</a></h2>
+<span id="sustainability"></span><h2><a class="toc-backref" href="#id16" role="doc-backlink">Long term sustainability</a><a class="headerlink" href="#long-term-sustainability" title="Permalink to this heading">#</a></h2>
 <p>The long term sustainability of software is directly related to the level of infrastructure and
 tooling around the code to characterise its design, behavior and performance. This infrastructure
 is typically automated through services like GitHub, and it is targetted at developers in two
@@ -747,7 +844,7 @@ debuggers and profilers.</p>
 able to determine whether their change had the intended effect and no side effects.</p>
 </section>
 <section id="accuracy">
-<span id="id4"></span><h2><a class="toc-backref" href="#id16" role="doc-backlink">Accuracy</a><a class="headerlink" href="#accuracy" title="Permalink to this heading">#</a></h2>
+<span id="id4"></span><h2><a class="toc-backref" href="#id17" role="doc-backlink">Accuracy</a><a class="headerlink" href="#accuracy" title="Permalink to this heading">#</a></h2>
 <p>Validation - Are you building the right thing?
 Verification - Are you building the thing right?</p>
 <ul class="simple">
@@ -762,7 +859,7 @@ Consider testing like writing a report - prove to the reader that it is correct 
 </ul>
 </section>
 <section id="methodologies-for-communicating-intent-and-verifying-implementation">
-<span id="communicating-design"></span><h2><a class="toc-backref" href="#id17" role="doc-backlink">Methodologies for communicating intent and verifying implementation</a><a class="headerlink" href="#methodologies-for-communicating-intent-and-verifying-implementation" title="Permalink to this heading">#</a></h2>
+<span id="communicating-design"></span><h2><a class="toc-backref" href="#id18" role="doc-backlink">Methodologies for communicating intent and verifying implementation</a><a class="headerlink" href="#methodologies-for-communicating-intent-and-verifying-implementation" title="Permalink to this heading">#</a></h2>
 <p>To understand how a change fits into the big picture, it is required to have a sense for the picture from the start.
 Develop diagrams for code architecture and regularly check and update them as the architecture changes.</p>
 <p>Types of diagrams:</p>
@@ -774,7 +871,7 @@ Develop diagrams for code architecture and regularly check and update them as th
 <p>Identify and communicate the <em>parti</em>.</p>
 </section>
 <section id="appendix-the-engineer-behind-the-code">
-<span id="rse"></span><h2><a class="toc-backref" href="#id18" role="doc-backlink">Appendix - The “engineer” behind the code</a><a class="headerlink" href="#appendix-the-engineer-behind-the-code" title="Permalink to this heading">#</a></h2>
+<span id="rse"></span><h2><a class="toc-backref" href="#id19" role="doc-backlink">Appendix - The “engineer” behind the code</a><a class="headerlink" href="#appendix-the-engineer-behind-the-code" title="Permalink to this heading">#</a></h2>
 <p>Consider the human impacts - Developers should know the context in which their code exists.
 They should be experts in the implementation and very good in the usage.
 A typical path may look something like this:</p>
@@ -788,7 +885,7 @@ A typical path may look something like this:</p>
 It should not go to 0, but the majority of involvement in software development should be code review, design, and project planning.</p>
 </section>
 <section id="ideas">
-<h2><a class="toc-backref" href="#id19" role="doc-backlink">Ideas</a><a class="headerlink" href="#ideas" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">Ideas</a><a class="headerlink" href="#ideas" title="Permalink to this heading">#</a></h2>
 <p><strong>Optimize for readability not writability.</strong>
 Don’t assume your code makes sense to everybody else. Use natural language to express ideas in
 the documentation and code comments. As much as possible, write your code so that it reads close
@@ -840,7 +937,7 @@ How long do we expect it to be relevant?</p>
 </ul>
 <p><strong>Reproducibility</strong></p>
 <section id="style">
-<h3><a class="toc-backref" href="#id20" role="doc-backlink">Style</a><a class="headerlink" href="#style" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Style</a><a class="headerlink" href="#style" title="Permalink to this heading">#</a></h3>
 <p>Consider who we write our software for and the primary use cases</p>
 <ul class="simple">
 <li><p>Other researchers</p></li>
@@ -884,7 +981,7 @@ How long do we expect it to be relevant?</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="notes">
-<h1><a class="toc-backref" href="#id21" role="doc-backlink">Notes</a><a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h1>
+<h1><a class="toc-backref" href="#id22" role="doc-backlink">Notes</a><a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h1>
 <p><a class="reference external" href="https://quarto.org/docs/gallery/">https://quarto.org/docs/gallery/</a></p>
 <ul class="simple">
 <li><p>See the article section</p></li>
@@ -959,11 +1056,12 @@ It also addresses the various audiences and how to serve the developer community
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Best Practices and Expectations</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contexts">Contexts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility">Accessibility</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barrier-to-entry">Barrier to entry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisite-knowledge">Prerequisite knowledge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">Distribution</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usability">Usability</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extensibility">Extensibility</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extendability">Extendability</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approachable-style">Approachable style</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collaborative-workflows">Collaborative workflows</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">Version control</a></li>
