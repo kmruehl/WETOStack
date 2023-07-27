@@ -213,23 +213,6 @@ graph LR
     F --> H
 ```
 
-
-What is the barrier to entry for practitioners and developers? Are practitioners expected to have
-programming knowledge and domain-specific knowledge?
-Ideally, practitioners are expected or assumed to have a reasonable amount of domain knowledge,
-but in most cases very little computer programming knowledge is expected. The exception is in HPC
-software where the ability to configure a HPC system and understand consequences of the
-configuration is assumed.
-
-How will developers get the required tools like dependencies or other development tools?
-Are all tools available for all supported operating systems?
-Does the software run on both personal computers and super computers?
-
-Nuances of research software:
-- The code itself is often the "front end" so complicated interfaces can't hide behind an app
-- The infrastructure for distribution (i.e. installation) is much. more hands-on than say an app store or browser
-- Users expect the balance between stability and control to lean toward control whereas users expect commercial software to lean toward stability.
-
 (usability)=
 ## Usability
 
