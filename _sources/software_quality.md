@@ -320,7 +320,7 @@ Useful error messages:
     - Include the value of data that is found invalid
 
 
-=(metadata)
+(metadata)=
 ### Metadata
 
 Tracking metadata in software projects is a simple way to provide clarity to all users.
