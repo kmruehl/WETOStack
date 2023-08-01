@@ -395,9 +395,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extendability">Extendability</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approachable-style">Approachable style</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collaborative-workflows">Collaborative workflows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-style">Code style</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-zen-of-python">The Zen of Python</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">Version control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collaborative-workflows-with-github">Collaborative workflows with GitHub</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-requests">Pull Requests</a></li>
 </ul>
 </li>
@@ -405,10 +408,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy">Accuracy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologies-for-communicating-intent-and-verifying-implementation">Methodologies for communicating intent and verifying implementation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-the-engineer-behind-the-code">Appendix - The “engineer” behind the code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideas">Ideas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#style">Style</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideas">Ideas</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
@@ -519,21 +519,21 @@ into the following sections:</p>
 </li>
 <li><p><a class="reference internal" href="#extendability" id="id18">Extendability</a></p>
 <ul>
-<li><p><a class="reference internal" href="#approachable-style" id="id19">Approachable style</a></p></li>
-<li><p><a class="reference internal" href="#collaborative-workflows" id="id20">Collaborative workflows</a></p></li>
-<li><p><a class="reference internal" href="#version-control" id="id21">Version control</a></p></li>
-<li><p><a class="reference internal" href="#pull-requests" id="id22">Pull Requests</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#long-term-sustainability" id="id23">Long term sustainability</a></p></li>
-<li><p><a class="reference internal" href="#accuracy" id="id24">Accuracy</a></p></li>
-<li><p><a class="reference internal" href="#methodologies-for-communicating-intent-and-verifying-implementation" id="id25">Methodologies for communicating intent and verifying implementation</a></p></li>
-<li><p><a class="reference internal" href="#appendix-the-engineer-behind-the-code" id="id26">Appendix - The “engineer” behind the code</a></p></li>
-<li><p><a class="reference internal" href="#ideas" id="id27">Ideas</a></p>
+<li><p><a class="reference internal" href="#code-style" id="id19">Code style</a></p>
 <ul>
-<li><p><a class="reference internal" href="#style" id="id28">Style</a></p></li>
+<li><p><a class="reference internal" href="#the-zen-of-python" id="id20">The Zen of Python</a></p></li>
 </ul>
 </li>
+<li><p><a class="reference internal" href="#version-control" id="id21">Version control</a></p></li>
+<li><p><a class="reference internal" href="#collaborative-workflows-with-github" id="id22">Collaborative workflows with GitHub</a></p></li>
+<li><p><a class="reference internal" href="#pull-requests" id="id23">Pull Requests</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#long-term-sustainability" id="id24">Long term sustainability</a></p></li>
+<li><p><a class="reference internal" href="#accuracy" id="id25">Accuracy</a></p></li>
+<li><p><a class="reference internal" href="#methodologies-for-communicating-intent-and-verifying-implementation" id="id26">Methodologies for communicating intent and verifying implementation</a></p></li>
+<li><p><a class="reference internal" href="#appendix-the-engineer-behind-the-code" id="id27">Appendix - The “engineer” behind the code</a></p></li>
+<li><p><a class="reference internal" href="#ideas" id="id28">Ideas</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#notes" id="id29">Notes</a></p></li>
@@ -550,7 +550,7 @@ Consider these best practices as general guidelines for planning research activi
 <p>**Point out that one overarching theme is to DOCUMENT! Write, draw, model - whatever you need - to
 communicate the ideas in your head. If you aren’t able to make someone else understand your idea,
 it might as well not exist.
-<strong>An idea only exists if it has been written down.</strong></p>
+<strong>An idea only exists if it has been communicated.</strong></p>
 <section id="contexts">
 <h2><a class="toc-backref" href="#id8" role="doc-backlink">Contexts</a><a class="headerlink" href="#contexts" title="Permalink to this heading">#</a></h2>
 <p>consider two kinds of “users”:</p>
@@ -852,95 +852,178 @@ the state of the computing environment, and any user decisions.</p>
 </section>
 <section id="extendability">
 <span id="id4"></span><h2><a class="toc-backref" href="#id18" role="doc-backlink">Extendability</a><a class="headerlink" href="#extendability" title="Permalink to this heading">#</a></h2>
-<p>Extendability is concerned with how the software is extended to add make improvements such as
-new features and bug fixes.</p>
-<p>Is the code open source?
-Are binaries available?
+<p>Extendability is concerned with how improvements such as new features, bug fixes, and general
+maintenance are added to an existing software project. This covers both the technical aspects
+as well as the management of mulitple developers and development efforts happening
+concurrently.</p>
+<p><strong>Don’t be clever</strong>
+<strong>Keep it super simple (KISS)</strong></p>
+<p>The lifecycle of WETO software typically follows a cyclical pattern of funding, development, and
+release, as depicted below. Note that the “Maintenance” tasks are usually optional and included
+in future development efforts. Therefore, it is critical to the life of all WETO software to
+prioritize extendability so that future funding opportunities are attractive to stakeholders
+and general maintenance and infrastructure upgrades can be introduced with minimal overhead.</p>
+<!-- TODO: strengthen this intro. The point is that maintenance is key to the life of WETO software.
+If it's difficult to extend, any research effort will seem very expensive. Additionally, developers
+move on to other organizations and pass their software to other developers. If it's difficult
+to extend, new developers will have a tough time or simply will move on to other tools.
+Possibly include this diagram (or a version of the funding / development cycle) below in the intro.
+-->
+<div class="mermaid">
+            flowchart LR
+
+    a[&quot;Research
+    &amp; development&quot;]
+    b[&quot;Verification&quot;]
+    c[&quot;General use&quot;]
+    d[&quot;Optional: Maintenance&quot;]
+
+    a --&gt; b
+    b --&gt; c
+    c -.-&gt; d
+    c --&gt; a
+    d -.-&gt; a
+        </div><p>Is the code open source?
 If not, is there a build system with modern dependencies?
 i.e. Makefiles are outdated, use CMake</p>
-<p>Nuances of research software:
-- <strong>The life and relevance of research software critically depends on new developers coming into the project</strong></p>
-<p>The style of the code should avoid complexity where possible and favor readability over writability.
-In other words, don’t be clever.</p>
-<p>This is closely tied to <strong>(6) methodologies for communicating intent and verifying implementation</strong></p>
-<section id="approachable-style">
-<h3><a class="toc-backref" href="#id19" role="doc-backlink">Approachable style</a><a class="headerlink" href="#approachable-style" title="Permalink to this heading">#</a></h3>
-<p>An extendable software is approachable. Convoluted code is difficult to understand quickly. Understand what it means to “grok” and strive to construct software that can be easily grokked (<a class="reference external" href="https://en.wikipedia.org/wiki/Grok">https://en.wikipedia.org/wiki/Grok</a>).</p>
+<!-- Nuances of research software:
+- **The life and relevance of research software critically depends on new developers coming into the project** -->
+<p>This is closely tied to <strong>(6) methodologies for communicating intent and verifying implementation</strong>
+Generally, use ubiquitous infrastructure</p>
+<ul class="simple">
+<li><p>Project managers can rely on mature third party tools to handle complex systems</p></li>
+<li><p>Mature third party tools typically come with their own documentation</p></li>
+</ul>
+<section id="code-style">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">Code style</a><a class="headerlink" href="#code-style" title="Permalink to this heading">#</a></h3>
+<p>In software development, the word “grok” is often used (see usage in
+<a class="reference external" href="https://hn.algolia.com/?q=grok">Hacker News</a>,
+<a class="reference external" href="https://lobste.rs/search?q=grok&amp;what=stories&amp;order=newest">Lobsters</a>,
+<a class="reference external" href="https://stackoverflow.com/search?tab=newest&amp;q=grok&amp;searchOn=3">StackOverflow</a>)
+to communicate about degrees of understanding. This word is described by it’s creator below.</p>
 <blockquote>
-<div><p><em>Grok</em> means “to understand”, of course, but Dr. Mahmoud, who might be termed the leading Terran expert on Martians, explains that it also means, “to drink” and “a hundred other English words, words which we think of as antithetical concepts. ‘Grok’ means <em>all</em> of these. It means ‘fear’, it means ‘love’, it means ‘hate’ – proper hate, for by the Martian ‘map’ you cannot hate anything unless you grok it, understand it so thoroughly that you merge with it and it merges with you – then you can hate it. By hating yourself. But this implies that you love it, too, and cherish it and would not have it otherwise. Then you can <em>hate</em> – and (I think) Martian hate is an emotion so black that the nearest human equivalent could only be called mild distaste.</p>
+<div><p><em>Grok</em> means “to understand”, of course, but Dr. Mahmoud, who might be termed the leading
+Terran expert on Martians, explains that it also means, “to drink” and “a hundred other
+English words, words which we think of as antithetical concepts. ‘Grok’ means <em>all</em> of
+these. It means ‘fear’, it means ‘love’, it means ‘hate’ – proper hate, for by the Martian
+‘map’ you cannot hate anything unless you grok it, understand it so thoroughly that you
+merge with it and it merges with you – then you can hate it. By hating yourself. But this
+implies that you love it, too, and cherish it and would not have it otherwise. Then you
+can <em>hate</em> – and (I think) Martian hate is an emotion so black that the nearest human
+equivalent could only be called mild distaste.</p>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="kn">import</span> <span class="nn">this</span>
+<p>Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Grok">https://en.wikipedia.org/wiki/Grok</a>.</p>
+<p>That such a word exists and is widely used in software development illustrates the high value
+of clear and understandable code.
+WETO software should avoid complexity where possible and favor readability over writability.
+Strive to create software that can be easily grokked by developers who do not have the current
+context.</p>
+<p>The designers of the Python programming language consider readability as a primary priority, and
+the most famous of the many Python language-development documents is
+<a class="reference external" href="https://peps.python.org/pep-0008/">PEP 8</a> which proposes a style guide for Python code.
+PEP 8 is summarized into 19 aphorisms (20 including one that’s implied) and is refered to as
+<a class="reference external" href="https://peps.python.org/pep-0020/">“The Zen of Python”</a>. Much of the WETO software portfolio is
+Python-based, so these guiding principles directly apply. However, these principles are
+programming language agnostic and eloquently describe the paradigm for developing
+extendable software.</p>
+<section id="the-zen-of-python">
+<span id="zen-python"></span><h4><a class="toc-backref" href="#id20" role="doc-backlink">The Zen of Python</a><a class="headerlink" href="#the-zen-of-python" title="Permalink to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="kn">import</span> <span class="nn">this</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The Zen of Python, by Tim Peters
 
-<span class="n">The</span> <span class="n">Zen</span> <span class="n">of</span> <span class="n">Python</span><span class="p">,</span> <span class="n">by</span> <span class="n">Tim</span> <span class="n">Peters</span>
-
-<span class="n">Beautiful</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">ugly</span><span class="o">.</span>
-<span class="n">Explicit</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">implicit</span><span class="o">.</span>
-<span class="n">Simple</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="nb">complex</span><span class="o">.</span>
-<span class="n">Complex</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">complicated</span><span class="o">.</span>
-<span class="n">Flat</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">nested</span><span class="o">.</span>
-<span class="n">Sparse</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">dense</span><span class="o">.</span>
-<span class="n">Readability</span> <span class="n">counts</span><span class="o">.</span>
-<span class="n">Special</span> <span class="n">cases</span> <span class="n">aren</span><span class="s1">&#39;t special enough to break the rules.</span>
-<span class="n">Although</span> <span class="n">practicality</span> <span class="n">beats</span> <span class="n">purity</span><span class="o">.</span>
-<span class="n">Errors</span> <span class="n">should</span> <span class="n">never</span> <span class="k">pass</span> <span class="n">silently</span><span class="o">.</span>
-<span class="n">Unless</span> <span class="n">explicitly</span> <span class="n">silenced</span><span class="o">.</span>
-<span class="n">In</span> <span class="n">the</span> <span class="n">face</span> <span class="n">of</span> <span class="n">ambiguity</span><span class="p">,</span> <span class="n">refuse</span> <span class="n">the</span> <span class="n">temptation</span> <span class="n">to</span> <span class="n">guess</span><span class="o">.</span>
-<span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">one</span><span class="o">--</span> <span class="ow">and</span> <span class="n">preferably</span> <span class="n">only</span> <span class="n">one</span> <span class="o">--</span><span class="n">obvious</span> <span class="n">way</span> <span class="n">to</span> <span class="n">do</span> <span class="n">it</span><span class="o">.</span>
-<span class="n">Although</span> <span class="n">that</span> <span class="n">way</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">obvious</span> <span class="n">at</span> <span class="n">first</span> <span class="n">unless</span> <span class="n">you</span><span class="s1">&#39;re Dutch.</span>
-<span class="n">Now</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">never</span><span class="o">.</span>
-<span class="n">Although</span> <span class="n">never</span> <span class="ow">is</span> <span class="n">often</span> <span class="n">better</span> <span class="n">than</span> \<span class="o">*</span><span class="n">right</span>\<span class="o">*</span> <span class="n">now</span><span class="o">.</span>
-<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">hard</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span><span class="s1">&#39;s a bad idea.</span>
-<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">easy</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span> <span class="n">may</span> <span class="n">be</span> <span class="n">a</span> <span class="n">good</span> <span class="n">idea</span><span class="o">.</span>
-<span class="n">Namespaces</span> <span class="n">are</span> <span class="n">one</span> <span class="n">honking</span> <span class="n">great</span> <span class="n">idea</span> <span class="o">--</span> <span class="n">let</span><span class="s1">&#39;s do more of those!</span>
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&#39;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&#39;re Dutch.
+Now is better than never.
+Although never is often better than \*right\* now.
+If the implementation is hard to explain, it&#39;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&#39;s do more of those!
 </pre></div>
 </div>
 </section>
-<section id="collaborative-workflows">
-<h3><a class="toc-backref" href="#id20" role="doc-backlink">Collaborative workflows</a><a class="headerlink" href="#collaborative-workflows" title="Permalink to this heading">#</a></h3>
-<p>The process for collaborating with other developers is essential to define and optimize.
-Version control must be in place, and it is best to use <code class="docutils literal notranslate"><span class="pre">git</span></code> since it is ubiquitous.
-While git is decentralized so repositories can be stored on any system, GitHub is the most
-common store for open source software.
-GitHub contains some key features for coordinating software development:</p>
+</section>
+<section id="version-control">
+<span id="id5"></span><h3><a class="toc-backref" href="#id21" role="doc-backlink">Version control</a><a class="headerlink" href="#version-control" title="Permalink to this heading">#</a></h3>
+<p>Version control, typically with <code class="docutils literal notranslate"><span class="pre">git</span></code>, is a tool for tracking the evolution of a project change
+by change establishing a history of changes.
+Each change is itself a version of the software, and they provide a snapshot of thought
+processes and progression of work.</p>
+<p>BP: Craft a version control history that communicates the evolution of changes of the software
+to future developers including the author of current changes.
+BP: Evolve the software in a logical, linear process with digestible change sizes.</p>
+<p>Version control with git is often a secondary consideration in the software development process.
+It can seem like simply a mechanism to “save” the state of a document.
+However, it carries far more meaning in the context of software extendability.
+Since the git system is decentralized, it allows for multiple developers to make changes to a
+project concurrently.
+Git also provides a mechanism for resolving differences so that multiple changes can be merged
+together easily.</p>
+<p>In addition to the content of changes themselves, the connectivity between changes is valuable
+over the lifetime of a project.
+The connectivity between commits is structured as a
+<a class="reference external" href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">directed acyclical graph (DAG)</a>.
+Each commit has a parent and each parent can have multiple children.
+This provides a mechanism for easily and accurately rolling back to the state of the project at any
+time in history.</p>
+<p>To best leverage the power of git to enable extendability, consider the following guidelines:</p>
+<ul class="simple">
+<li><p>It is reasonable to spend time crafting each commit and a sequence of commits.</p></li>
+<li><p>Practice editing a series of commits to ensure that the progress of work is captured accurately.</p></li>
+<li><p>Consider whether the commit history is concise and readable to people who are not the authors.</p></li>
+<li><p>Become familiar with the following actions:</p>
+<ul>
+<li><p>Interactive rebase</p></li>
+<li><p>Cherry-pick</p></li>
+<li><p>Squash</p></li>
+<li><p>Edit a commit message</p></li>
+</ul>
+</li>
+<li><p>Commit messages should be short, and it is a convention to limit them less than 50 characters.</p></li>
+<li><p>An additional line can be included as a longer description of the commit beneath the
+50 character line. The second line is typically limited to 70 characters, but it is
+considered reasonable to use as much space as needed.</p></li>
+</ul>
+</section>
+<section id="collaborative-workflows-with-github">
+<h3><a class="toc-backref" href="#id22" role="doc-backlink">Collaborative workflows with GitHub</a><a class="headerlink" href="#collaborative-workflows-with-github" title="Permalink to this heading">#</a></h3>
+<p>The processes through which developers interact with a software and other developers is
+an essential component of extendability.
+These processes should generally strive for efficiency while minimizing overhead.
+Automated processes are better than manual processes, and objective is better than subjective.
+The majority of collaborative software development processes occur on cloud-based resources on
+the GitHub platform.</p>
+<p><strong>BP: Plan and coordinate software development efforts into a collaborative workflow using GitHub</strong></p>
+<p><strong>BP: Automate code quality feedback as much as possible via GitHub Actions</strong></p>
+<p>GitHub contains some key features for coordinating software development:</p>
 <ul class="simple">
 <li><p>Issue tracking</p></li>
 <li><p>Forum-style discussions</p></li>
 <li><p>Pull request and code review</p></li>
 <li><p>Project boards</p></li>
 </ul>
-</section>
-<section id="version-control">
-<span id="id5"></span><h3><a class="toc-backref" href="#id21" role="doc-backlink">Version control</a><a class="headerlink" href="#version-control" title="Permalink to this heading">#</a></h3>
-<p>Version control, typically with <code class="docutils literal notranslate"><span class="pre">git</span></code>, is a tool for tracking the evolution of a project change
-by change.
-The git history is meaningful for our future selves.
-It should provide a snapshot of thought processes and progression through work.
-Commits are often considered a way to “save” work similar to hitting the save button in a word
-processor.
-While that is one outcome, the most value is in the information implied in the connectivity of
-commits.
-That is, each commit has a parent and each parent can have multiple children.
-The exception is the first commit as it has no parent.
-This provides a mechanism for easily and accurately rolling back to the state of the project at any
-time in history.</p>
-<p>It is reasonable to spend time crafting each commit and a sequence of commits.
-Consider practicing editing a series of commits to ensure that the progress of work is captured
-accurately.
-Most importantly, consider whether the commit history is concise and readable to people who are
-not the authors.
-Become familiar with the following actions:</p>
-<ul class="simple">
-<li><p>Interactive rebase</p></li>
-<li><p>Cherry-pick</p></li>
-<li><p>Squash</p></li>
-<li><p>Edit a commit message</p></li>
-</ul>
-<p>The commit messages should be short, and it is a standard convention to limit them less than
-50 characters.
-Another line of comment can be included as a longer description of the commit.
-This is less typically limited to 70 characters, but it is considered reasonable to use many
-more characters here when needed.
-GitHub even displays these longer descriptions separately within the commit view.
+<p>GitHub and git (see <a class="reference internal" href="#version-control"><span class="std std-ref">Version control</span></a>) are tightly connected, but they are different
+systems and serve different purposes in the development process.
+Git is a version control system for tracking and merging changes to a software.
+GitHub is a platform for orchestrating and coordinating the various processes that happen
+around the development cycle.
+GitHub activities add context on top of the individual changes captured in commits.
+Whereas commits often capture low-level information, GitHub activities can map the low level
+details to high-level efforts.</p>
+<p>GitHub even displays these longer descriptions separately within the commit view.
 <SHOW GITHUB COMMIT VIEW></p>
 <p>All version control messages (commits and pull requests) should communicate what the change
 accomplishes.
@@ -968,7 +1051,7 @@ It automatically takes the titles of each pull request to construct the release 
 to users and downstream dependencies.</p>
 </section>
 <section id="pull-requests">
-<h3><a class="toc-backref" href="#id22" role="doc-backlink">Pull Requests</a><a class="headerlink" href="#pull-requests" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">Pull Requests</a><a class="headerlink" href="#pull-requests" title="Permalink to this heading">#</a></h3>
 <p>A pull request is a request to merge a particular set of code changes into another copy of the
 software, typically an agreed upon “main” version.</p>
 <p>Pull requests should include contextual information regarding the code change. The intention is
@@ -978,7 +1061,7 @@ the change and a description of why the change is valid and well tested.</p>
 </section>
 </section>
 <section id="long-term-sustainability">
-<span id="sustainability"></span><h2><a class="toc-backref" href="#id23" role="doc-backlink">Long term sustainability</a><a class="headerlink" href="#long-term-sustainability" title="Permalink to this heading">#</a></h2>
+<span id="sustainability"></span><h2><a class="toc-backref" href="#id24" role="doc-backlink">Long term sustainability</a><a class="headerlink" href="#long-term-sustainability" title="Permalink to this heading">#</a></h2>
 <p>The long term sustainability of software is directly related to the level of infrastructure and
 tooling around the code to characterise its design, behavior and performance. This infrastructure
 is typically automated through services like GitHub, and it is targetted at developers in two
@@ -1005,7 +1088,7 @@ debuggers and profilers.</p>
 able to determine whether their change had the intended effect and no side effects.</p>
 </section>
 <section id="accuracy">
-<span id="id6"></span><h2><a class="toc-backref" href="#id24" role="doc-backlink">Accuracy</a><a class="headerlink" href="#accuracy" title="Permalink to this heading">#</a></h2>
+<span id="id6"></span><h2><a class="toc-backref" href="#id25" role="doc-backlink">Accuracy</a><a class="headerlink" href="#accuracy" title="Permalink to this heading">#</a></h2>
 <p>Validation - Are you building the right thing?
 Verification - Are you building the thing right?</p>
 <ul class="simple">
@@ -1020,7 +1103,7 @@ Consider testing like writing a report - prove to the reader that it is correct 
 </ul>
 </section>
 <section id="methodologies-for-communicating-intent-and-verifying-implementation">
-<span id="communicating-design"></span><h2><a class="toc-backref" href="#id25" role="doc-backlink">Methodologies for communicating intent and verifying implementation</a><a class="headerlink" href="#methodologies-for-communicating-intent-and-verifying-implementation" title="Permalink to this heading">#</a></h2>
+<span id="communicating-design"></span><h2><a class="toc-backref" href="#id26" role="doc-backlink">Methodologies for communicating intent and verifying implementation</a><a class="headerlink" href="#methodologies-for-communicating-intent-and-verifying-implementation" title="Permalink to this heading">#</a></h2>
 <p>To understand how a change fits into the big picture, it is required to have a sense for the picture from the start.
 Develop diagrams for code architecture and regularly check and update them as the architecture changes.</p>
 <p>Types of diagrams:</p>
@@ -1032,7 +1115,7 @@ Develop diagrams for code architecture and regularly check and update them as th
 <p>Identify and communicate the <em>parti</em>.</p>
 </section>
 <section id="appendix-the-engineer-behind-the-code">
-<span id="rse"></span><h2><a class="toc-backref" href="#id26" role="doc-backlink">Appendix - The “engineer” behind the code</a><a class="headerlink" href="#appendix-the-engineer-behind-the-code" title="Permalink to this heading">#</a></h2>
+<span id="rse"></span><h2><a class="toc-backref" href="#id27" role="doc-backlink">Appendix - The “engineer” behind the code</a><a class="headerlink" href="#appendix-the-engineer-behind-the-code" title="Permalink to this heading">#</a></h2>
 <p>Consider the human impacts - Developers should know the context in which their code exists.
 They should be experts in the implementation and very good in the usage.
 A typical path may look something like this:</p>
@@ -1046,7 +1129,7 @@ A typical path may look something like this:</p>
 It should not go to 0, but the majority of involvement in software development should be code review, design, and project planning.</p>
 </section>
 <section id="ideas">
-<h2><a class="toc-backref" href="#id27" role="doc-backlink">Ideas</a><a class="headerlink" href="#ideas" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id28" role="doc-backlink">Ideas</a><a class="headerlink" href="#ideas" title="Permalink to this heading">#</a></h2>
 <p><strong>Optimize for readability not writability.</strong>
 Don’t assume your code makes sense to everybody else. Use natural language to express ideas in
 the documentation and code comments. As much as possible, write your code so that it reads close
@@ -1097,40 +1180,6 @@ How long do we expect it to be relevant?</p>
 <li><p>Tie the grading scheme to the technical report so that any areas of the grades can reference back to the best practices</p></li>
 </ul>
 <p><strong>Reproducibility</strong></p>
-<section id="style">
-<h3><a class="toc-backref" href="#id28" role="doc-backlink">Style</a><a class="headerlink" href="#style" title="Permalink to this heading">#</a></h3>
-<p>Consider who we write our software for and the primary use cases</p>
-<ul class="simple">
-<li><p>Other researchers</p></li>
-<li><p>Model accessibility is important - we have to be able to extend the software</p></li>
-</ul>
-<p>Don’t be clever, keep it super simple</p>
-<p>For example, consider the following code to create a 3x3 grid:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update the layout to be a staggered 3x3 turbine grid</span>
-<span class="n">layout_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="o">*</span> <span class="mi">700</span>
-<span class="n">layout_x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">250</span>
-<span class="n">layout_x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">500</span>
-<span class="n">layout_x</span> <span class="o">=</span> <span class="n">layout_x</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-
-<span class="n">layout_y</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">601</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>It is probably computationally efficient, but its also difficult to read.</p>
-<p>It could be equivalently written like this</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update the layout to be a staggered 3x3 turbine grid</span>
-<span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">1400</span><span class="p">])</span>
-<span class="n">layout_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="n">x_array</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">])</span>
-<span class="n">layout_x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">250</span>
-<span class="n">layout_x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">500</span>
-<span class="n">layout_x</span> <span class="o">=</span> <span class="n">layout_x</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-
-<span class="n">layout_y</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">601</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
-
-<span class="o">...</span> <span class="n">I</span> <span class="n">dont</span> <span class="n">know</span> <span class="n">how</span> <span class="n">to</span> <span class="n">really</span> <span class="n">simplify</span> <span class="n">it</span> <span class="n">but</span> <span class="n">the</span> <span class="n">reshape</span><span class="p">,</span> <span class="n">arange</span><span class="p">,</span> <span class="n">flatten</span><span class="p">,</span> <span class="nb">all</span> <span class="n">these</span> <span class="n">things</span> <span class="n">are</span>
-<span class="n">convoluted</span> <span class="ow">and</span> <span class="n">make</span> <span class="n">this</span> <span class="n">code</span> <span class="n">look</span> <span class="n">overly</span> <span class="nb">complex</span><span class="o">.</span> <span class="n">It</span><span class="s1">&#39;s too much to track in your mind just to</span>
-<span class="n">create</span> <span class="n">a</span> <span class="n">simple</span> <span class="mi">3</span><span class="n">x3</span> <span class="n">layout</span><span class="o">.</span>
-</pre></div>
-</div>
 <p>Talk about code reviews and what to consider when reviewing and proposing code.</p>
 <ul class="simple">
 <li><p>Reviews should be verbose and to the point</p></li>
@@ -1138,7 +1187,6 @@ How long do we expect it to be relevant?</p>
 <li><p>Run the code! Try to break it. Really exercise the new code. It’s not enough to simply read it.</p></li>
 <li></li>
 </ul>
-</section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="notes">
@@ -1232,9 +1280,12 @@ It also addresses the various audiences and how to serve the developer community
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extendability">Extendability</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approachable-style">Approachable style</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collaborative-workflows">Collaborative workflows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-style">Code style</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-zen-of-python">The Zen of Python</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">Version control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collaborative-workflows-with-github">Collaborative workflows with GitHub</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-requests">Pull Requests</a></li>
 </ul>
 </li>
@@ -1242,10 +1293,7 @@ It also addresses the various audiences and how to serve the developer community
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy">Accuracy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologies-for-communicating-intent-and-verifying-implementation">Methodologies for communicating intent and verifying implementation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-the-engineer-behind-the-code">Appendix - The “engineer” behind the code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideas">Ideas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#style">Style</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideas">Ideas</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
