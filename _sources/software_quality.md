@@ -645,22 +645,6 @@ The first repository requires opening individual changes to understand their sco
 :align: center
 ```
 
-Futhermore, GitHub automatically contructs release notes from all of the pull requests merged
-since the previous release.
-It automatically takes the titles of each pull request to construct the release notes.
-"Update XYZ" again provides no context and more work is required to communicate what has changed
-to users and downstream dependencies.
-
-### Pull Requests
-
-A pull request is a request to merge a particular set of code changes into another copy of the
-software, typically an agreed upon "main" version.
-
-Pull requests should include contextual information regarding the code change. The intention is
-to convince reviewers and maintainers that the new code is in a good state and that it's
-inclusion would be a benefit to the project. This typically involves a contextual description of
-the change and a description of why the change is valid and well tested.
-
 (sustainability)=
 ## Long term sustainability
 
