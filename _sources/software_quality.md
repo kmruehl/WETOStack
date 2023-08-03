@@ -518,6 +518,7 @@ GitHub contains some key features for coordinating software development:
 - Forum-style discussions
 - Pull request and code review
 - Project boards
+- Releases
 
 GitHub and git (see [](version_control)) are tightly connected, but they are different
 systems and serve different purposes in the development process.
@@ -528,10 +529,98 @@ GitHub activities add context on top of the individual changes captured in commi
 Whereas commits often capture low-level information, GitHub activities can map the low level
 details to high-level efforts.
 
+Become familiar with GitHub features and leverage them to plan and communicate.
+<!-- TODO Include a link to resources to learn about GitHub -->
+
+GitHub features can be used a many ways. The primary features are described below and a typical
+sequence of events across these features is described.
+
+- [Discussions](https://docs.github.com/en/discussions): This is typically the starting point
+    for any collaboration. Create a discussion topic and engage with other model stakeholders
+    to define the idea and develop a proposed implementation.
+- [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues):
+    Document the proposed solution to a problem or implementation of a new feature as outlined
+    in the corresponding Discussion. Finalize the description and outline test cases to verify
+    the idea.
+- [Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects):
+    Collect Issues, Pull Requests, and generic cards to establish a relationship across all
+    ongoing works in progress. This is typically most useful for large development efforts
+    and prioritizing work for upcoming releases.
+- [Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests):
+    Pull Requests (PR) are a request to accept a change into a branch. This typically happens
+    across forks of a repository, but it can also happen between branches of the same fork.
+    During the implementation of an Issue, open a pull request to communicate that work is
+    ongoing. This is also the venue for code reviews.
+- [Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases):
+    A number of accepted pull requests can be aggregated to comprise one release, and this is
+    listed in a project's GitHub Releases page along with release notes to describe the changes
+    and communicate relevant details.
+
+```{mermaid}
+sequenceDiagram
+    autonumber
+
+    participant Community
+    participant Developer
+    participant Maintainer
+
+    activate Community
+
+    Community -> Community: Create Discussion describing a gap or feature
+
+    activate Developer
+    activate Maintainer
+    loop Design Discussion
+        Maintainer->>Community: Feedback
+        Developer->>Community: Feedback
+        Developer->>Maintainer: Propose implementation
+    end
+    deactivate Community
+
+    Developer->Developer: Open an Issue to finalize proposal
+    Maintainer->Maintainer: Include Issue in a Project
+
+    loop Implementation & Review
+        Developer->>Maintainer: Submit a Pull Request
+        Maintainer->>Developer: Provide code review feedback
+    end
+    deactivate Developer
+
+    Maintainer->>Community: Merge Pull Request
+    deactivate Maintainer
+```
+
+Along with git, GitHub provides a helpful mechanism to capture design intent, factors that lead
+to particular decisions, and the evolution of a project for future reference.
+However, it is important carefully craft the messages to avoid washing out information
+with noise.
+The following are guidelines to consider when engaging on GitHub.
+
+- Descriptions of any activity should be well scoped and easily understandable.
+- Pictures really are worth 1,000 words. Always include a diagram, plot, screenshot, or picture
+    when it will add clarity.
+- Prefer actual text over of screenshots of text. GitHub is searchable, so text provides more
+    searchable context whereas screenshots do not. Additionally, text-based code snippets can be
+    copied easily by other users.
+- Establish a practice of assigning responsibility for each Issue and Pull Request. Without
+    a person to take ownership, these will remain unaddressed.
 
 
- GitHub even displays these longer descriptions separately within the commit view.
-<SHOW GITHUB COMMIT VIEW>
+### Pull Requests
+
+A pull request is a request to merge a particular set of code changes into another copy of the
+software, typically an agreed upon "main" version.
+
+Pull requests should include contextual information regarding the code change. The intention is
+to convince reviewers and maintainers that the new code is in a good state and that it's
+inclusion would be a benefit to the project. This typically involves a contextual description of
+the change and a description of why the change is valid and well tested.
+
+Futhermore, GitHub automatically contructs release notes from all of the pull requests merged
+since the previous release.
+It automatically takes the titles of each pull request to construct the release notes.
+"Update XYZ" again provides no context and more work is required to communicate what has changed
+to users and downstream dependencies.
 
 All version control messages (commits and pull requests) should communicate what the change
 accomplishes.
