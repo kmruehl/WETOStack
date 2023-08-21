@@ -25,20 +25,20 @@ The objective of the workshop is to initiate the conversations around two primar
 | 8:00 | 8:30 | Coffee chat / intros |     |
 | 8:30 | 8:45 | Welcome, intro, workshop goals and rules | Rafael Mudafort |
 | 8:45 | 9:15 | DOE WETO Software Context | Ben Hallissey |
-| 9:15 | 9:50 | Breakout 1: What is the purpose of WETO Software? | All |
-| 9:50 | 10:00 | Reports | All |
+| 9:15 | 9:50 | Breakout 1: What is the purpose of WETO Software? |  |
+| 9:50 | 10:00 | Reports | Group reporter |
 | 10:00 | 10:15 | Break	|  |
-| 10:15 | 11:15 | Portfolio Coordination Project Overview + Portfolio Overview | Garrett Barter and co |
-| 11:15 | 11:50 | Breakout 2: Broadly, where should WETO Software be going? | All |
-| 11:50 | 12:00 | Reports | All |
+| 10:15 | 11:15 | Portfolio Coordination Project Overview + Portfolio Overview | Technical area experts |
+| 11:15 | 11:50 | Breakout 2: Broadly, where should WETO Software be going? |  |
+| 11:50 | 12:00 | Reports | Group reporter |
 | 12:00 | 1:00 | Lunch | |
 | 1:00 | 1:40 | Best Practices Overview	| Rafael Mudafort |
 | 1:40 | 2:00 | Group feedback and discussion | All |
-| 2:00 | 2:35 | Breakout 3: What are the major paint points in our development processes? | All |
-| 2:35 | 2:45 | Reports | All |
+| 2:00 | 2:35 | Breakout 3: What are the major paint points in our development processes? |  |
+| 2:35 | 2:45 | Reports | Group reporter |
 | 2:45 | 3:00 | Break | |
-| 3:00 | 3:30 | Breakout 4: Where to invest time and efforts in the upcoming FY's | All |
-| 3:30 | 3:40 | Reports | All |
+| 3:00 | 3:30 | Breakout 4: Where to invest time and efforts in the upcoming FY's |  |
+| 3:30 | 3:40 | Reports | Group reporter |
 | 3:40 | 4:00 | Closing remarks	| Rafael Mudafort |
 | 5:00 | 8:00 | Post workshop happy hour - The Golden Mill	|   |
 
