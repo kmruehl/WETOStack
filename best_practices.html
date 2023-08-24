@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Best Practices and Expectations &#8212; WETO Software</title>
+    <title>Research Software Best Practices &#8212; WETO Software</title>
   
   
   
@@ -63,10 +63,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'software_quality';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'best_practices';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Wind Turbine and Wind Farm Aerodynamics" href="capabilities/aero.html" />
+    <link rel="prev" title="Attribute Schema" href="portfolio_analysis/attributes_schema.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -132,13 +132,19 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="intro.html">
+<a class="navbar-brand logo" href="index.html">
   
   
   
   
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
-    <p class="title logo__title">WETO Software</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -146,27 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
+                <a class="reference internal" href="index.html">
                     WETO Software Stack
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Suite</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="software_list.html">Software Listing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="map_network.html">Portfolio Network</a></li>
-<li class="toctree-l1"><a class="reference internal" href="attributes_schema.html">Attributes Schema</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Capabilities</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="capabilities.html">Capabilities</a></li>
-<li class="toctree-l1"><a class="reference internal" href="capabilities/system_design.html">System Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="capabilities/aero.html">Wind Turbine and Wind Farm Aerodynamics</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Quality</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Best Practices and Expectations</a></li>
-
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="workshop.html">Model Owners Workshop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="capabilities/overview.html">Portfolio Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portfolio_analysis/software_list.html">Portfolio Listing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portfolio_analysis/map_network.html">Depedency Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portfolio_analysis/attributes_schema.html">Attribute Schema</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Research Software Best Practices</a></li>
 </ul>
 
     </div>
@@ -238,7 +235,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/rafmudaf/wetostack/edit/main/docs/software_quality.md" target="_blank"
+      <li><a href="https://github.com/rafmudaf/wetostack/edit/main/docs/best_practices.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -255,7 +252,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/rafmudaf/wetostack/issues/new?title=Issue%20on%20page%20%2Fsoftware_quality.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/rafmudaf/wetostack/issues/new?title=Issue%20on%20page%20%2Fbest_practices.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/software_quality.md" target="_blank"
+      <li><a href="_sources/best_practices.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -367,7 +364,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Best Practices and Expectations</h1>
+    <h1>Research Software Best Practices</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -377,7 +374,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Best Practices and Expectations</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contexts">Contexts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility">Accessibility</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisite-knowledge">Prerequisite knowledge</a></li>
@@ -408,12 +404,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy">Accuracy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologies-for-communicating-intent-and-verifying-implementation">Methodologies for communicating intent and verifying implementation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-the-engineer-behind-the-research-software">Appendix - The engineer behind the research software</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideas">Ideas</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -424,8 +415,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="best-practices-and-expectations">
-<span id="bestpractices"></span><h1><a class="toc-backref" href="#id7" role="doc-backlink">Best Practices and Expectations</a><a class="headerlink" href="#best-practices-and-expectations" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="research-software-best-practices">
+<span id="bestpractices"></span><h1><a class="toc-backref" href="#id7" role="doc-backlink">Research Software Best Practices</a><a class="headerlink" href="#research-software-best-practices" title="Permalink to this heading">#</a></h1>
 <p>Wind energy researchers typically share one key characteristic: a passion for increasing
 wind energy in the global energy mix. The U.S. Department of Energy (DOE) supports this mission
 in a number of ways including allocating funding directly to various aspects of wind energy
@@ -496,7 +487,7 @@ into the following sections:</p>
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#best-practices-and-expectations" id="id7">Best Practices and Expectations</a></p>
+<li><p><a class="reference internal" href="#research-software-best-practices" id="id7">Research Software Best Practices</a></p>
 <ul>
 <li><p><a class="reference internal" href="#contexts" id="id8">Contexts</a></p></li>
 <li><p><a class="reference internal" href="#accessibility" id="id9">Accessibility</a></p>
@@ -533,13 +524,11 @@ into the following sections:</p>
 <li><p><a class="reference internal" href="#accuracy" id="id25">Accuracy</a></p></li>
 <li><p><a class="reference internal" href="#methodologies-for-communicating-intent-and-verifying-implementation" id="id26">Methodologies for communicating intent and verifying implementation</a></p></li>
 <li><p><a class="reference internal" href="#appendix-the-engineer-behind-the-research-software" id="id27">Appendix - The engineer behind the research software</a></p></li>
-<li><p><a class="reference internal" href="#ideas" id="id28">Ideas</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#notes" id="id29">Notes</a></p></li>
 </ul>
 </nav>
-<p>The information is aggregated from experience within WETO-supprted software development
+<p>The information is aggregated from experience within WETO-supported software development
 groups as well as external organizations and efforts to define the craft of research software
 engineering. These best practices aim to make the collaborative development process efficient
 and effective while improving the model understanding across stakeholders. Additionally,
@@ -590,12 +579,12 @@ This is an example of a barrier to entry often encountered by early-career resea
 experienced practitioners alike. In order to improve accessibility, it is important to
 understand the experience of users and design software to meet their needs.</p>
 <p><strong>BP: Identify target user profiles and anticipate their levels of understanding. Accurately
-understand the complixity of the systems used to access the software, and evaluate whether
+understand the complexity of the systems used to access the software, and evaluate whether
 this matches the expected skills in target users.</strong></p>
 <p>Some examples of common barriers to entry are:</p>
 <ul class="simple">
 <li><p>Navigating a “terminal”</p></li>
-<li><p>Knowledge of acryonyms, jargon, or interchangeable phrases</p>
+<li><p>Knowledge of acronyms, jargon, or interchangeable phrases</p>
 <ul>
 <li><p>CLI, API, IDE, etc</p></li>
 <li><p>Compile, clone, check out</p></li>
@@ -680,12 +669,12 @@ pipeline includes sub-system areas called “Continuous Testing” and “Contin
     GitHub Event
     (i.e. release)
     &quot;))
-    subgraph Continous Testing
+    subgraph Continuous Testing
         B[&quot;Run test suite&quot;]
     end
     C{&quot;Pass?&quot;}
     D[&quot;Notify author&quot;]
-    subgraph Continous Deployment
+    subgraph Continuous Deployment
         E[&quot;Build for conda&quot;]
         F[&quot;Build for PyPI&quot;]
         G[&quot;Publish to conda-forge&quot;]
@@ -797,7 +786,7 @@ adhere to the following conventions and principles.</p>
 </section>
 <section id="error-messages">
 <h3><a class="toc-backref" href="#id16" role="doc-backlink">Error messages</a><a class="headerlink" href="#error-messages" title="Permalink to this heading">#</a></h3>
-<p>Messaging to pracitioners from within a software can be immensely helpful.
+<p>Messaging to practioners from within a software can be immensely helpful.
 At the same time, the infrastructure for communicating messages can be a heavy lift.
 It is important to find a balance of appropriate levels of messaging while also ensuring that
 the messages themselves are up to date with the software features and implementations.
@@ -854,7 +843,7 @@ the state of the computing environment, and any user decisions.</p>
 <span id="id4"></span><h2><a class="toc-backref" href="#id18" role="doc-backlink">Extendability</a><a class="headerlink" href="#extendability" title="Permalink to this heading">#</a></h2>
 <p>Extendability is concerned with how improvements such as new features, bug fixes, and general
 maintenance are added to an existing software project. This covers both the technical aspects
-as well as the management of mulitple developers and development efforts happening
+as well as the management of multiple developers and development efforts happening
 concurrently.</p>
 <p><strong>Don’t be clever</strong>
 <strong>Keep it super simple (KISS)</strong></p>
@@ -921,7 +910,7 @@ context.</p>
 <p>The designers of the Python programming language consider readability as a primary priority, and
 the most famous of the many Python language-development documents is
 <a class="reference external" href="https://peps.python.org/pep-0008/">PEP 8</a> which proposes a style guide for Python code.
-PEP 8 is summarized into 19 aphorisms (20 including one that’s implied) and is refered to as
+PEP 8 is summarized into 19 aphorisms (20 including one that’s implied) and is referred to as
 <a class="reference external" href="https://peps.python.org/pep-0020/">“The Zen of Python”</a>. Much of the WETO software portfolio is
 Python-based, so these guiding principles directly apply. However, these principles are
 programming language agnostic and eloquently describe the paradigm for developing
@@ -1106,7 +1095,7 @@ software, typically an agreed upon “main” version.</p>
 to convince reviewers and maintainers that the new code is in a good state and that it’s
 inclusion would be a benefit to the project. This typically involves a contextual description of
 the change and a description of why the change is valid and well tested.</p>
-<p>Futhermore, GitHub automatically contructs release notes from all of the pull requests merged
+<p>Futhermore, GitHub automatically constructs release notes from all of the pull requests merged
 since the previous release.
 It automatically takes the titles of each pull request to construct the release notes.
 “Update XYZ” again provides no context and more work is required to communicate what has changed
@@ -1117,7 +1106,7 @@ Vague messages such as “updated solver” are distracting and lack meaning.
 Consider the following two pull request messages:</p>
 <ul class="simple">
 <li><p>“Update turbine ontology”</p></li>
-<li><p>“NatSpec: Fix diplicated display of the data type in NatSpec <code class="docutils literal notranslate"><span class="pre">///</span> <span class="pre">&#64;return</span></code> commens”</p></li>
+<li><p>“NatSpec: Fix duplicated display of the data type in NatSpec <code class="docutils literal notranslate"><span class="pre">///</span> <span class="pre">&#64;return</span></code> comments”</p></li>
 </ul>
 <p>The first message vaguely indicates an “update” while the second clearly states what is changed.
 The first message provides n detail around what is updated or why it matters while the second
@@ -1129,14 +1118,14 @@ second implicitly communicates much more information in just a few words.
 The outcome is that readers of the commit history in the second repository can quickly scan the
 commit history and understand the evolution of changes simply from the commit messages.
 The first repository requires opening individual changes to understand their scope and context.</p>
-<img alt="capabilities" class="align-center" src="images/commits_compared.png" />
+<img alt="capabilities" class="align-center" src="../_images/commits_compared.png" />
 </section>
 </section>
 <section id="long-term-sustainability">
 <span id="sustainability"></span><h2><a class="toc-backref" href="#id24" role="doc-backlink">Long term sustainability</a><a class="headerlink" href="#long-term-sustainability" title="Permalink to this heading">#</a></h2>
 <p>The long term sustainability of software is directly related to the level of infrastructure and
-tooling around the code to characterise its design, behavior and performance. This infrastructure
-is typically automated through services like GitHub, and it is targetted at developers in two
+tooling around the code to characterize its design, behavior and performance. This infrastructure
+is typically automated through services like GitHub, and it is targeted at developers in two
 different categories:</p>
 <ul class="simple">
 <li><p><strong>Maintainers</strong> who will keep the infrastructure running, update dependency versions and API’s,
@@ -1154,7 +1143,7 @@ internally, the software can continue to function with changes that happen exter
 This can involve updates to the software to support new operating systems, virtual machines,
 runtime environments, and hardware components. A recent example is the introduction of Apple
 computers with Arm-based CPU’s rather than the canonical x86 architecture. This change prompted
-a slew of upgrades to the entire ecosystem of software from compilers and interpretters to
+a slew of upgrades to the entire ecosystem of software from compilers and interpreters to
 debuggers and profilers.</p>
 <p>The extension component ensures that developers who work to add new features and improvements are
 able to determine whether their change had the intended effect and no side effects.</p>
@@ -1169,7 +1158,7 @@ Verification - Are you building the thing right?</p>
 <p>Test driven development - formalize the ideas that drive development.
 A portion of code should not be added without a formal proof of correctness and robustness.
 Consider testing like writing a report - prove to the reader that it is correct and should be accepted.</p>
-<p>Phenomenon identifcation and ranking table</p>
+<p>Phenomenon identification and ranking table</p>
 <ul class="simple">
 <li><p>David Maniaci</p></li>
 </ul>
@@ -1207,7 +1196,7 @@ an intimate understanding of research.
 software engineers to focus skill development on either the research domain or the aspects
 related to software engineering.
 Additionally, the research environment in academia and government research labs are structured
-to incentivise academic publication.
+to incentivize academic publication.
 Therefore, the resulting teams are often comprised of domain researchers and research software
 engineers.
 The domain researchers inform the needs of the research software and are the primary users.
@@ -1262,87 +1251,87 @@ A typical career trajectory within the national lab environment look something l
 then start to drop.
 It should not go to 0, but the majority of involvement in software development should be code
 review, design, and project planning.</p>
-</section>
-<section id="ideas">
-<h2><a class="toc-backref" href="#id28" role="doc-backlink">Ideas</a><a class="headerlink" href="#ideas" title="Permalink to this heading">#</a></h2>
-<p><strong>Optimize for readability not writability.</strong>
-Don’t assume your code makes sense to everybody else. Use natural language to express ideas in
+<!-- ## Ideas
+
+
+**Optimize for readability not writability.**
+Don't assume your code makes sense to everybody else. Use natural language to express ideas in
 the documentation and code comments. As much as possible, write your code so that it reads close
 to natural language. Language semantics and performance considerations can be in contrast to
 this, so it is up to the developer to find the right balance of expression of intent and
-achievement of the requirements of the code.</p>
-<p>Consider how users and developers will be able to come up to speed.</p>
-<ul class="simple">
-<li><p>Are algorithms documented in words and graphics?</p></li>
-</ul>
-<p>How are design intents communicated?</p>
-<ul class="simple">
-<li><p>These things should not live in someone’s head. In that case, they’re as good as gone.
-It only exists if it has been written down.</p></li>
-</ul>
-<p>Documentation and tests are not just a box to check so that the process can move forward.
+achievement of the requirements of the code.
+
+Consider how users and developers will be able to come up to speed.
+- Are algorithms documented in words and graphics?
+
+How are design intents communicated?
+- These things should not live in someone's head. In that case, they're as good as gone.
+It only exists if it has been written down.
+
+Documentation and tests are not just a box to check so that the process can move forward.
 It is an integral part of software. Software with poor quality documentation and tests is worse
 than software without documentation and tests, but both of these elements are a necessary
-consideration for collaboration. As in, if you’re writing code for yourself and you don’t value
-tests and documentation, no problem because its your own problem. However, if you’re writing
+consideration for collaboration. As in, if you're writing code for yourself and you don't value
+tests and documentation, no problem because its your own problem. However, if you're writing
 code so that other people can use it, it is detrimental to submit code with no or poor quality
 tests and documentation. This detracts from the project, adds noise to the code, and overall
-increases the barrier to entry and understanding for the entire software.</p>
-<p>Consider how a change fits into the big picture. The typical process is to figure out a
-way to “add code” to enable a feature. Instead, consider how to “incorporate code” to
+increases the barrier to entry and understanding for the entire software.
+
+Consider how a change fits into the big picture. The typical process is to figure out a
+way to "add code" to enable a feature. Instead, consider how to "incorporate code" to
 enable a feature. Adding-to without considering the whole continuously expands the scope and size
 of the code while increasing complexity, and this is unsustainable for future development and
 maintenance efforts. Consider how to incorporate a feature into the
 existing design or redesign the software to support both the current context and the
-new feature.</p>
-<p>Write a pull request so that it is easy to review. Make it plain what your changes are and
-why they were necessary and better than before.</p>
-<p>The general idea in software design is to create low level tools that you can use and reuse
-again and again at the high level. You know you’re doing things right when adding new
+new feature.
+
+Write a pull request so that it is easy to review. Make it plain what your changes are and
+why they were necessary and better than before.
+
+The general idea in software design is to create low level tools that you can use and reuse
+again and again at the high level. You know you're doing things right when adding new
 features involves writing very little new code and is mostly using existing code in new
-ways. Thats not to say its easy, but at least you’ve given yourself the tools with
-which to do your future work.</p>
-<p>Whats the purpose of our software?
+ways. Thats not to say its easy, but at least you've given yourself the tools with
+which to do your future work.
+
+Whats the purpose of our software?
 Who is the target audience?
-How long do we expect it to be relevant?</p>
-<ul class="simple">
-<li><p>This should be part of the design process</p></li>
-<li><p>Periodically reconsider whether the recent work and planned work is in line with these expectations</p></li>
-</ul>
-<p><strong>Require each project to develop a software engineering roadmap as well as a capabilities roadmap</strong></p>
-<p>Establish a grading scheme for software projects in future years</p>
-<ul class="simple">
-<li><p>Tie the grading scheme to the technical report so that any areas of the grades can reference back to the best practices</p></li>
-</ul>
-<p><strong>Reproducibility</strong></p>
-<p>Talk about code reviews and what to consider when reviewing and proposing code.</p>
-<ul class="simple">
-<li><p>Reviews should be verbose and to the point</p></li>
-<li><p>Consider the big pictures: what do these changes add to the project? how is it better than before?</p></li>
-<li><p>Run the code! Try to break it. Really exercise the new code. It’s not enough to simply read it.</p></li>
-<li></li>
-</ul>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="notes">
-<h1><a class="toc-backref" href="#id29" role="doc-backlink">Notes</a><a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h1>
-<p><a class="reference external" href="https://quarto.org/docs/gallery/">https://quarto.org/docs/gallery/</a></p>
-<ul class="simple">
-<li><p>See the article section</p></li>
-</ul>
-<p>UWashington eSciences Institute paper on the 3R development practices:</p>
-<ul class="simple">
-<li><p>Readability</p></li>
-<li><p>Resilience</p></li>
-<li><p>Reuse
+How long do we expect it to be relevant?
+- This should be part of the design process
+- Periodically reconsider whether the recent work and planned work is in line with these expectations
+
+**Require each project to develop a software engineering road map as well as a capabilities road map**
+
+Establish a grading scheme for software projects in future years
+- Tie the grading scheme to the technical report so that any areas of the grades can reference back to the best practices
+
+
+**Reproducibility**
+
+Talk about code reviews and what to consider when reviewing and proposing code.
+- Reviews should be verbose and to the point
+- Consider the big pictures: what do these changes add to the project? how is it better than before?
+- Run the code! Try to break it. Really exercise the new code. It's not enough to simply read it.
+-  -->
+<!-- ### Notes
+
+https://quarto.org/docs/gallery/
+- See the article section
+
+UWashington eSciences Institute paper on the 3R development practices:
+- Readability
+- Resilience
+- Reuse
 This nicely highlights writing code for particular audiences.
-<a class="reference external" href="https://hdsr.mitpress.mit.edu/pub/f0f7h5cu/release/2">https://hdsr.mitpress.mit.edu/pub/f0f7h5cu/release/2</a></p></li>
-</ul>
-<p>GitHub README blog post: how open should your open source be?
+https://hdsr.mitpress.mit.edu/pub/f0f7h5cu/release/2
+
+GitHub README blog post: how open should your open source be?
 It also addresses the various audiences and how to serve the developer community vs user community
-<a class="reference external" href="https://github.com/readme/featured/how-open-is-open-source?mc_cid=50779693b9&amp;amp;mc_eid=2d4b086884">https://github.com/readme/featured/how-open-is-open-source?mc_cid=50779693b9&amp;mc_eid=2d4b086884</a></p>
-<p>Documentation as a way to build community
-<a class="reference external" href="https://labs.quansight.org/blog/2020/03/documentation-as-a-way-to-build-community">https://labs.quansight.org/blog/2020/03/documentation-as-a-way-to-build-community</a></p>
+https://github.com/readme/featured/how-open-is-open-source?mc_cid=50779693b9&mc_eid=2d4b086884
+
+Documentation as a way to build community
+https://labs.quansight.org/blog/2020/03/documentation-as-a-way-to-build-community -->
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1374,12 +1363,12 @@ It also addresses the various audiences and how to serve the developer community
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="capabilities/aero.html"
+       href="portfolio_analysis/attributes_schema.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Wind Turbine and Wind Farm Aerodynamics</p>
+        <p class="prev-next-title">Attribute Schema</p>
       </div>
     </a>
 </div>
@@ -1397,7 +1386,6 @@ It also addresses the various audiences and how to serve the developer community
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Best Practices and Expectations</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contexts">Contexts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility">Accessibility</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisite-knowledge">Prerequisite knowledge</a></li>
@@ -1428,12 +1416,7 @@ It also addresses the various audiences and how to serve the developer community
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy">Accuracy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologies-for-communicating-intent-and-verifying-implementation">Methodologies for communicating intent and verifying implementation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-the-engineer-behind-the-research-software">Appendix - The engineer behind the research software</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideas">Ideas</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
