@@ -32,7 +32,7 @@ This breakout session follows an update from WETO on their perspective and focus
 we produce.
 The discussions should be informed by low-level experience but maintain a high-level perspective.
 The objective of this breakout session is to establish a mutual understanding of the group's
-perspective on the role and impact of WETO software.
+perspective on the role and impact of WETO software within the broad context of wind energy.
 
 Topic suggestions:
 - To create the tools to support our own research
@@ -83,6 +83,18 @@ Topic suggestions:
 
 ## Rules of Engagement
 
+Given the nature of a day-long meeting with lots of group discussion, it is important to
+establish rules for engagement.
+
+1. Many people are traveling to attend this workshop, and everyone is setting aside a full day.
+    To respect each other's time and effort, please keep all attention within the workshop.
+    - Laptops should remain closed. Note taking on paper is preferred.
+    - Step out of the room to use a phone including sending emails or text messages that require
+      more than a few seconds to write.
+
+2. Offer mutual respect. Each of the breakout sessions is meant to create discussion and
+    conversation. Arriving at one answer is required and in most cases not desired. The
+    objective is mutual understanding of perspectives.
 
 
 
@@ -111,20 +123,18 @@ in the A wing.
 ```{image} ./_images/rsf_4thfloor_map.png
 :alt: rsf_map
 :align: center
-:height: 200px
+:height: 400px
 ```
 
-:width: 200px
+**Breakout sessions**:
+Each breakout session will have its own room.
+One person should be designated as the reporter to report back overarching themes in the
+conversation.
+Additional note takers would be helpful to capture more information.
+
 
 **Parking**
 
 **Lunch and refreshments**
 
 We will have a group lunch at the RSF cafeteria.
-
-
-
-
-
-
-
