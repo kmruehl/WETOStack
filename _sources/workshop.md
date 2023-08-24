@@ -1,17 +1,24 @@
-(workshop)=
+(workshop_top)=
 # Model Owners Workshop
 
-This project will support an annual workshop to build the community of WETO software
-owners. The first workshop will be held on September 7, 2023, at NREL's Golden Campus.
-The objective of the workshop is to initiate the conversations around two primary topics:
-1. Holistically evaluating the WETO software portfolio
-2. Establishing a community-wide consensus on software quality expectations
+A component of the Holistic Modeling Portfolio Coordination Project is to coordinate and host
+an annual workshop with the purpose of strengthening the community of WETO software owners.
+**The first workshop will be help on September 7, 2023, at NREL's Golden Campus.**
 
-Being a community-focused workshop, there will be four breakout sessions where attendees will
-discuss topics as a group. The results of these discussions will be reported back to the full
-workshop, and they will also be incorporated into their associated aspects of the
-Portfolio Coordination project.
+The objective of the first workshop is to *initialize* the community.
+To that end, two primary topics will be threaded throughout the conversations:
+1. Opportunities and strategies to elevate the quality of WETO software
+2. Holistic evaluation of the existing portfolio
 
+There will be four breakout sessions where attendees will discuss topics as a group.
+Prior to the breakouts, preplanned talks from WETO and members of the Holistic Modeling project
+will seed the conversations in the following breakouts. Please see the [](workshop_agenda)
+for details.
+
+```{contents}
+```
+
+(workshop_agenda)=
 ## Agenda
 
 ```{raw} html
@@ -32,15 +39,6 @@ Topic suggestions:
 - To establish a mechanism to disseminate our research
 - To provide the industry with tools to design wind energy systems
 - To full industry adoption
-
-
-Third option:
-- how might we engage with independent organizations to deal with these long term maintenance burdens
-  - inter (?) foundation
-  - Apache foundation
-  - Linux foundation
-
-
 
 ## Breakout 2: In what direction should WETO software go?
 
@@ -81,3 +79,52 @@ Topic suggestions:
 - Establish a software quality czar to consult with particular groups or models
 - Focus on interoperability / model alignment
 - Establish common inputs (i.e. windIO)
+
+
+## Rules of Engagement
+
+
+
+
+
+
+## Day-Of Logistics
+
+````{admonition} NREL Golden Campus Address
+:class: tip
+
+```
+National Renewable Energy Laboratory
+15013 Denver West Parkway
+Golden, CO 80401
+```
+
+-> [Google Maps link](https://goo.gl/maps/Q9fZMNxZqHjqVLcf9)
+````
+
+
+
+**Location**: The workshop will take place in the Cache La Poudre meeting room in the
+RSF building at NREL's Golden Campus. The room number is "X405" and it is on the RSF's 4th floor
+in the A wing.
+
+```{image} ./_images/rsf_4thfloor_map.png
+:alt: rsf_map
+:align: center
+:height: 200px
+```
+
+:width: 200px
+
+**Parking**
+
+**Lunch and refreshments**
+
+We will have a group lunch at the RSF cafeteria.
+
+
+
+
+
+
+
