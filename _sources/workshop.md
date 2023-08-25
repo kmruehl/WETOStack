@@ -52,12 +52,11 @@ Topic suggestions:
 - To provide the industry with tools to design wind energy systems
 - To full industry adoption
 
-
-Third option:
+<!-- Third option:
 - how might we engage with independent organizations to deal with these long term maintenance burdens
   - inter (?) foundation
   - Apache foundation
-  - Linux foundation
+  - Linux foundation -->
 
 ## Breakout 2: In what direction should WETO software go?
 
@@ -167,13 +166,12 @@ One person should be designated as the reporter to report back overarching theme
 conversation.
 Additional note takers would be helpful to capture more information.
 
-Print prompts for each breakout
+<!-- TODO: Print prompts for each breakout -->
 
 **Parking**
 
 Details coming Soon.
 
-
+<!-- TODO
 Visitor's lot
-NREL staff park in the employee lot (garage).
-
+NREL staff park in the employee lot (garage). -->
