@@ -12,10 +12,10 @@ To that end, two primary topics will be threaded throughout the conversations:
 
 There will be four breakout sessions where attendees will discuss topics as a group.
 Prior to the breakouts, preplanned talks from WETO and members of the Holistic Modeling project
-will seed the conversations in the breakouts. Please see the [](workshop_agenda)
-for details.
+will seed the conversations in the breakouts. Please see the [](workshop_agenda) and
+[](logistics) for details.
 
-All attendees are asked to complete the following tasks prior to the workshop:
+**All attendees are asked to complete the following tasks prior to the workshop:**
 - Review the [](portfolio_listing) to ensure that all WETO-supported software within your field
   of expertise is listed.
 - Create a pull request to https://github.com/rafmudaf/WETOStack with an attributes description
@@ -51,6 +51,13 @@ Topic suggestions:
 - To establish a mechanism to disseminate our research
 - To provide the industry with tools to design wind energy systems
 - To full industry adoption
+
+
+Third option:
+- how might we engage with independent organizations to deal with these long term maintenance burdens
+  - inter (?) foundation
+  - Apache foundation
+  - Linux foundation
 
 ## Breakout 2: In what direction should WETO software go?
 
@@ -95,9 +102,6 @@ Topic suggestions:
 
 ## Rules of Engagement
 
-Given the nature of a day-long meeting with lots of group discussion, it is important to
-establish rules for engagement.
-
 ````{card}
 Respect the group's time and attention
 ^^^
@@ -116,6 +120,7 @@ Arriving at one answer is not required and in most cases not desired.
 The objective is mutual understanding of perspectives.
 ````
 
+(logistics)=
 ## Day-Of Logistics
 
 ````{admonition} NREL Golden Campus Address
@@ -130,7 +135,16 @@ Golden, CO 80401
 -> [Google Maps link](https://goo.gl/maps/Q9fZMNxZqHjqVLcf9)
 ````
 
-**Location**: The workshop will take place in the Cache La Poudre meeting room in the
+**Times**
+
+The workshop officially begins at 8:30 am, and the meeting room will be available from
+8:00 am with coffee / tea.
+We will have a break between the start and lunch, and another break between lunch and the end.
+Lunch is scheduled for noon.
+
+**Location**
+
+The workshop will take place in the Cache La Poudre meeting room in the
 RSF building at NREL's Golden Campus. The room number is "X405" and it is on the RSF's 4th floor
 in the A wing.
 
@@ -144,16 +158,22 @@ in the A wing.
 We will have a group lunch at the RSF Cafe, and it will not be covered by the workshop.
 Coffee and refreshments will be provided within the workshop room.
 
+<!-- TODO Find the right elevator to get the 4th floor A wing -->
 
-**Breakout sessions**:
+**Breakout sessions**
+
 Each breakout session will have its own room.
 One person should be designated as the reporter to report back overarching themes in the
 conversation.
 Additional note takers would be helpful to capture more information.
 
+Print prompts for each breakout
 
 **Parking**
 
 Details coming Soon.
 
+
+Visitor's lot
+NREL staff park in the employee lot (garage).
 
