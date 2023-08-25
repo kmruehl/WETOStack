@@ -12,8 +12,20 @@ To that end, two primary topics will be threaded throughout the conversations:
 
 There will be four breakout sessions where attendees will discuss topics as a group.
 Prior to the breakouts, preplanned talks from WETO and members of the Holistic Modeling project
-will seed the conversations in the following breakouts. Please see the [](workshop_agenda)
+will seed the conversations in the breakouts. Please see the [](workshop_agenda)
 for details.
+
+All attendees are asked to complete the following tasks prior to the workshop:
+- Review the [](portfolio_listing) to ensure that all WETO-supported software within your field
+  of expertise is listed.
+- Create a pull request to https://github.com/rafmudaf/WETOStack with an attributes description
+  for your software projects following the guidance in [](schema).
+- Review the [](workshop_agenda) and [breakout session topics](breakout1).
+
+`````{admonition} Contact
+:class: tip
+Please contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
+`````
 
 ```{contents}
 ```
@@ -86,19 +98,23 @@ Topic suggestions:
 Given the nature of a day-long meeting with lots of group discussion, it is important to
 establish rules for engagement.
 
-1. Many people are traveling to attend this workshop, and everyone is setting aside a full day.
-    To respect each other's time and effort, please keep all attention within the workshop.
-    - Laptops should remain closed. Note taking on paper is preferred.
-    - Step out of the room to use a phone including sending emails or text messages that require
-      more than a few seconds to write.
+````{card}
+Respect the group's time and attention
+^^^
+Many people are traveling to attend this workshop, and everyone is setting aside a full day.
+Please keep all attention within the workshop.
+- Laptops should remain closed. Note taking on paper is preferred.
+- Step out of the room to use a phone including sending emails or text messages that require
+  more than a few seconds to write.
+````
 
-2. Offer mutual respect. Each of the breakout sessions is meant to create discussion and
-    conversation. Arriving at one answer is required and in most cases not desired. The
-    objective is mutual understanding of perspectives.
-
-
-
-
+````{card} 
+Discuss rather than debate
+^^^
+Each breakout sessions is intended meant to create discussion and conversation.
+Arriving at one answer is not required and in most cases not desired.
+The objective is mutual understanding of perspectives.
+````
 
 ## Day-Of Logistics
 
@@ -114,8 +130,6 @@ Golden, CO 80401
 -> [Google Maps link](https://goo.gl/maps/Q9fZMNxZqHjqVLcf9)
 ````
 
-
-
 **Location**: The workshop will take place in the Cache La Poudre meeting room in the
 RSF building at NREL's Golden Campus. The room number is "X405" and it is on the RSF's 4th floor
 in the A wing.
@@ -125,6 +139,11 @@ in the A wing.
 :align: center
 :height: 400px
 ```
+**Lunch and refreshments**
+
+We will have a group lunch at the RSF Cafe, and it will not be covered by the workshop.
+Coffee and refreshments will be provided within the workshop room.
+
 
 **Breakout sessions**:
 Each breakout session will have its own room.
@@ -135,6 +154,6 @@ Additional note takers would be helpful to capture more information.
 
 **Parking**
 
-**Lunch and refreshments**
+Details coming Soon.
 
-We will have a group lunch at the RSF cafeteria.
+
