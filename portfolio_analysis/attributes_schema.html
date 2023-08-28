@@ -445,7 +445,15 @@ is available, and it is run automatically upon creation and update of the pull r
             </div>
         </div>
     </div>
-</div></div>
+</div><p>Each attribute in blue text is a drop-down element.
+Try clicking the attribute text “system_type” above to open the element.</p>
+<p>The first line indicates the data type required for the value.
+In this case, <code class="docutils literal notranslate"><span class="pre">Type:</span> <span class="pre">array</span> <span class="pre">of</span> <span class="pre">enum</span> <span class="pre">(of</span> <span class="pre">string)</span></code> means the value must be an array where each
+element is a string matching one of a predefined set of options.</p>
+<p>The next line is a description of the attribute.</p>
+<p>Then, contextual information for the data type and available options for the value is provided.
+Finally, an example is given in some cases.</p>
+</div>
 
 
 <!DOCTYPE html>
@@ -917,14 +925,20 @@ In the web address, this is the last component: https://github.com/&lt;account>/
             <div class="card-body pl-5">
 
     <span class="badge badge-dark value-type">Type: string or array of enum (of string)</span><br/>
-<span class="description"><p>Does the software support time domain modeling or analysis, steady-state modeling or analysis, or both?</p>
+<span class="description"><p>Does the software support time domain modeling or analysis and/or steady-state modeling or analysis? This is an array-type field, so include two  elements if both are supported</p>
 </span>
         
 
         
         
 
-        
+        <br/>
+<div class="badge badge-secondary">Example:</div>
+<br/><div id="time_domain_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="nt">time_domain</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">steady</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dynamic</span>
+</pre></div>
+</div>
             </div>
         </div>
     </div>
@@ -1856,11 +1870,13 @@ In the web address, this is the last component: https://github.com/&lt;account>/
             <div class="card-body pl-5">
 
     <span class="badge badge-dark value-type">Type: array of array</span><br/>
-<span class="description"><p>List other WETO software projects associated with this one either through a direct or indirect connection.<br />
+<span class="description"><p>List other WETO software projects that this one depends on either through a direct or indirect connection.<br />
  - <code>direct</code>: code-code integration<br />
  - <code>indirect</code>: one uses the output of the other via output file or another workflow process</p>
 
 <p>This field is a 2D list. See the example below for syntax.</p>
+
+<p>An example of a real dependency is FLORIS requires a power coefficient and thrust coefficient look up table from a higher fidelity simulation or field data. This often comes from OpenFAST, so that tool is an indirect dependency of FLORIS.</p>
 </span>
         
 
@@ -1934,7 +1950,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
 </div>
 
     <footer>
-        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2023-08-21 at 08:26:00 -0500</p>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2023-08-28 at 18:12:09 -0500</p>
     </footer></body>
 </html></section>
 
