@@ -30,7 +30,7 @@ models = [
 model_connectivity = {}
 for model in models:
     attributes = yaml.safe_load( open(Path("..", "..", "software_attributes", "database", f"{model}.yaml"), "r") )
-    model_connectivity[model] = attributes["downstream_integrations"]
+    model_connectivity[model] = attributes["dependencies"]
 
 network_graph = nx.DiGraph()
 for model, connections in model_connectivity.items():
