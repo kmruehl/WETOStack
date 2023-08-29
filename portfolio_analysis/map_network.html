@@ -409,15 +409,20 @@ to construct their inputs. These are connected through workflows rather than cod
     <span class="s2">&quot;anba4&quot;</span><span class="p">,</span>
     <span class="s2">&quot;floris&quot;</span><span class="p">,</span>
     <span class="s2">&quot;openfast&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;openoa&quot;</span><span class="p">,</span>
     <span class="s2">&quot;rosco&quot;</span><span class="p">,</span>
     <span class="s2">&quot;sonata&quot;</span><span class="p">,</span>
     <span class="s2">&quot;weis&quot;</span><span class="p">,</span>
     <span class="s2">&quot;windse&quot;</span><span class="p">,</span>
     <span class="s2">&quot;wisdem&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;wombat&quot;</span><span class="p">,</span>
 <span class="p">]</span>
 <span class="n">model_connectivity</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
     <span class="n">attributes</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;software_attributes&quot;</span><span class="p">,</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">.yaml&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
+    <span class="c1"># print(model)</span>
+    <span class="k">if</span> <span class="s2">&quot;dependencies&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">attributes</span><span class="p">:</span>
+        <span class="k">continue</span>
     <span class="n">model_connectivity</span><span class="p">[</span><span class="n">model</span><span class="p">]</span> <span class="o">=</span> <span class="n">attributes</span><span class="p">[</span><span class="s2">&quot;dependencies&quot;</span><span class="p">]</span>
 
 <span class="n">network_graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
@@ -439,9 +444,9 @@ to construct their inputs. These are connected through workflows rather than cod
 <span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="s2">&quot;anba4&quot;</span><span class="p">,</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="s2">&quot;floris&quot;</span><span class="p">,</span>
    <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="s2">&quot;wisdem&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">model_connectivity</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="s2">&quot;wombat&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">model_connectivity</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;networkx&#39;
 </pre></div>
@@ -492,7 +497,7 @@ to construct their inputs. These are connected through workflows rather than cod
 <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span>
     <span class="n">network_graph</span><span class="p">,</span>
     <span class="n">layout</span><span class="p">,</span>
-    <span class="n">font_size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span>
+    <span class="n">font_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
     <span class="n">bbox</span><span class="o">=</span><span class="n">label_options</span><span class="p">,</span>
     <span class="c1"># font_family=&quot;sans-serif&quot;</span>
 <span class="p">)</span>
@@ -535,13 +540,13 @@ to construct their inputs. These are connected through workflows rather than cod
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/yp/vdv3q8mn4xj1_m277lk54s75tvdqcf/T/ipykernel_34444/758863718.py:6: DeprecationWarning: nx.nx_pydot.graphviz_layout depends on the pydot package, which hasknown issues and is not actively maintained. Consider usingnx.nx_agraph.graphviz_layout instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/yp/vdv3q8mn4xj1_m277lk54s75tvdqcf/T/ipykernel_23660/1330741652.py:6: DeprecationWarning: nx.nx_pydot.graphviz_layout depends on the pydot package, which hasknown issues and is not actively maintained. Consider usingnx.nx_agraph.graphviz_layout instead.
 
 See https://github.com/networkx/networkx/issues/5723
   layout = nx.nx_pydot.graphviz_layout(network_graph, prog=&quot;dot&quot;)
 </pre></div>
 </div>
-<img alt="../_images/e0fbf030e247bd96d4eb3ec613a4cb576c1286fd4c446094680fba0a125cd68e.png" src="../_images/e0fbf030e247bd96d4eb3ec613a4cb576c1286fd4c446094680fba0a125cd68e.png" />
+<img alt="../_images/81257461eb4bdc7408b81bcb32a049fc3d7dfd7a84970544d38a2155dcc763af.png" src="../_images/81257461eb4bdc7408b81bcb32a049fc3d7dfd7a84970544d38a2155dcc763af.png" />
 </div>
 </div>
 </section>

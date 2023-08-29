@@ -23,15 +23,20 @@ models = [
     "anba4",
     "floris",
     "openfast",
+    "openoa",
     "rosco",
     "sonata",
     "weis",
     "windse",
     "wisdem",
+    "wombat",
 ]
 model_connectivity = {}
 for model in models:
     attributes = yaml.safe_load( open(Path("..", "..", "software_attributes", "database", f"{model}.yaml"), "r") )
+    # print(model)
+    if "dependencies" not in attributes:
+        continue
     model_connectivity[model] = attributes["dependencies"]
 
 network_graph = nx.DiGraph()
@@ -52,9 +57,9 @@ Cell [0;32mIn[1], line 3[0m
 [1;32m      6[0m     [38;5;124m"[39m[38;5;124manba4[39m[38;5;124m"[39m,
 [1;32m      7[0m     [38;5;124m"[39m[38;5;124mfloris[39m[38;5;124m"[39m,
 [0;32m   (...)[0m
-[1;32m     13[0m     [38;5;124m"[39m[38;5;124mwisdem[39m[38;5;124m"[39m,
-[1;32m     14[0m ]
-[1;32m     15[0m model_connectivity [38;5;241m=[39m {}
+[1;32m     15[0m     [38;5;124m"[39m[38;5;124mwombat[39m[38;5;124m"[39m,
+[1;32m     16[0m ]
+[1;32m     17[0m model_connectivity [38;5;241m=[39m {}
 
 [0;31mModuleNotFoundError[0m: No module named 'networkx'
 
