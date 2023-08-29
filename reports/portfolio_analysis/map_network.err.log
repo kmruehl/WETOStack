@@ -20,12 +20,14 @@ import yaml
 import networkx as nx
 
 models = [
+    "anba4",
     "floris",
     "openfast",
     "rosco",
+    "sonata",
     "weis",
-    "wisdem",
     "windse",
+    "wisdem",
 ]
 model_connectivity = {}
 for model in models:
@@ -47,12 +49,12 @@ Cell [0;32mIn[1], line 3[0m
 [1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01myaml[39;00m
 [0;32m----> 3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnetworkx[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnx[39;00m
 [1;32m      5[0m models [38;5;241m=[39m [
-[1;32m      6[0m     [38;5;124m"[39m[38;5;124mfloris[39m[38;5;124m"[39m,
-[1;32m      7[0m     [38;5;124m"[39m[38;5;124mopenfast[39m[38;5;124m"[39m,
+[1;32m      6[0m     [38;5;124m"[39m[38;5;124manba4[39m[38;5;124m"[39m,
+[1;32m      7[0m     [38;5;124m"[39m[38;5;124mfloris[39m[38;5;124m"[39m,
 [0;32m   (...)[0m
-[1;32m     11[0m     [38;5;124m"[39m[38;5;124mwindse[39m[38;5;124m"[39m,
-[1;32m     12[0m ]
-[1;32m     13[0m model_connectivity [38;5;241m=[39m {}
+[1;32m     13[0m     [38;5;124m"[39m[38;5;124mwisdem[39m[38;5;124m"[39m,
+[1;32m     14[0m ]
+[1;32m     15[0m model_connectivity [38;5;241m=[39m {}
 
 [0;31mModuleNotFoundError[0m: No module named 'networkx'
 
