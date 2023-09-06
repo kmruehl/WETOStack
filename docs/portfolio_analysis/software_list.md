@@ -78,6 +78,7 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 - PyFrame3DD: https://github.com/WISDEM/pyFrame3DD
 - CACTUS: https://github.com/sandialabs/CACTUS
 - WEC-Sim/MOST: https://github.com/WEC-Sim/WEC-Sim and http://www.morenergylab.polito.it/most/
+- OWENS: https://www.nrel.gov/docs/fy23osti/83748.pdf
 
 *Deprecated or no longer supported:*
 - ADAMS2AD: The MSC.ADAMS-to-AeroDyn (ADAMS2AD) interface is a software package for simulating the coupled dynamic response of horizontal-axis wind turbines.
